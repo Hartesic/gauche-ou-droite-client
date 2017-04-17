@@ -26,7 +26,7 @@ export default class Quiz extends Component {
     // I feel pretty bad about this, but hey! it's a very little app...
     axios.get('http://localhost:5000/')
       .then((response) => {
-        const congressmen = JSON.parse(response.data)
+        const congressmen = response.data
         this.setState({ ...DEFAULT_STATE, congressmen })
       })
       .catch((error) => {
@@ -38,25 +38,36 @@ export default class Quiz extends Component {
     const { answers, congressmen, fetchError } = this.state
     if (fetchError) {
       return (
-        <ErrorMessage tryAgainFn={this.startGame} />
+        <ErrorMessage
+          tryAgainFn={this.startGame}
+        />
       )
     } else if (congressmen[0]) {
       // Data fetched...
       if (answers[0]) {
         // ... and game finished:
         return (
-          <Results answers={answers} congressmen={congressmen} playAgainFn={this.startGame} />
+          <Results
+            answers={answers}
+            congressmen={congressmen}
+            playAgainFn={this.startGame}
+          />
         )
       } else {
-        // ... begin game:
+        // ... start game:
         return (
-          <Questions congressmen={congressmen} storeAnwsersFn={this.storeAnswers} />
+          <Questions
+            congressmen={congressmen}
+            storeAnswersFn={this.storeAnswers}
+          />
         )
       }
     } else {
-      // No data fetched, game did not begin:
+      // No data fetched, game hasn't started:
       return (
-        <Welcome startGameFn={this.startGame} />
+        <Welcome
+          startGameFn={this.startGame}
+        />
       )
     }
   }

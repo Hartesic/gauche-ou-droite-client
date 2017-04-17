@@ -17,7 +17,7 @@ export default class Results extends Component {
       <div>
         <p>Pas besoin d'envoyer "fizik" au 81212 pour savoir si tu es physionomiste, on te dit tout ici :</p>
         <strong>{this.getFormattedScore()}</strong>
-        <button onClick={playAgainFn}>I can do better, test me again!</button>
+        <button onClick={e => playAgainFn()}>I can do better, test me again!</button>
       </div>
     )
   }
