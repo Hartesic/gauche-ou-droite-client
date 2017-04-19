@@ -2,10 +2,10 @@ import React from 'react'
 
 export default ({ answer, congressman, currentQuestionIndex, nextQuestionFn, questionCount }) => (
   <div>
-    <span>{currentQuestionIndex} / {questionCount}</span>
-    <span>{answer === congressman.side ? "Bien vu !" : "Et non !" }</span>
+    <div>{currentQuestionIndex} / {questionCount}</div>
+    <div>{answer === congressman.side ? "Bien vu !" : "Et non !" }</div>
     <img src={congressman.path} alt="Photo d'un député (!)"/>
-    <span>{congressman.parti}</span>
+    <div>{congressman.parti}</div>
     <button onClick={nextQuestionFn}>Ok, suivant !</button>
   </div>
 )

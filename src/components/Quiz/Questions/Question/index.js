@@ -2,7 +2,7 @@ import React from 'react'
 
 export default ({ congressman, currentQuestionIndex, questionCount, selectAnswerFn }) => (
   <div>
-    <span>{currentQuestionIndex} / {questionCount}</span>
+    <div>{currentQuestionIndex} / {questionCount}</div>
     <img src={congressman.path} alt="Photo d'un député (!)" />
     <div>
       <button onClick={e => selectAnswerFn('gauche')}>Gauche</button>

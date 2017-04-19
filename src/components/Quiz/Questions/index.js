@@ -50,8 +50,7 @@ export default class Questions extends Component {
   }
 
   selectAnswer (answer) {
-    const { answers } = this.state
-    answers.push(answer)
-    this.setState({ answer })
+    const answers = [ ...this.state.answers, answer ]
+    this.setState({ answers })
   }
 }
