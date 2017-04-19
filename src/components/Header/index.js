@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default () => (
+const Header = () => (
   <header>
-    Header
+    <h1>Gauche ou Droite ?</h1>
+    <hr/>
   </header>
 )
+
+export default Header

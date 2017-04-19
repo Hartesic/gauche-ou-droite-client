@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default () => (
+const Footer = () => (
   <footer>
-    Footer
+    <hr/>
+    Copyright &copy; 2017 L'équipe Gauche ou Droite
   </footer>
 )
+
+export default Footer

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Results extends Component {
+class Results extends Component {
   getFormattedScore () {
     return this.getScore() + '/20'
   }
@@ -22,3 +22,5 @@ export default class Results extends Component {
     )
   }
 }
+
+export default Results

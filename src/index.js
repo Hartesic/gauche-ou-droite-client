@@ -3,9 +3,11 @@ import { render } from 'react-dom'
 
 import App from './components/App'
 
+const API_URL = 'http://localhost:5000'
+
 render(
   (
-    <App />
+    <App apiUrl={API_URL} />
   ),
-  document.getElementById('root')
+  document.getElementById('godContainer')
 )

@@ -4,10 +4,12 @@ import Footer from './Footer'
 import Quiz from './Quiz'
 import Header from './Header'
 
-export default () => (
+const App = ({ apiUrl }) => (
   <div>
     <Header />
-    <Quiz />
+    <Quiz apiUrl={apiUrl} />
     <Footer />
   </div>
 )
+
+export default App

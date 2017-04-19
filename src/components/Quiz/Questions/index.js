@@ -8,7 +8,7 @@ const DEFAULT_STATE = {
   currentCongressmanIndex: 0
 }
 
-export default class Questions extends Component {
+class Questions extends Component {
   constructor () {
     super()
     this.state = DEFAULT_STATE
@@ -29,11 +29,12 @@ export default class Questions extends Component {
 
   render () {
     const { answers, currentCongressmanIndex } = this.state
-    const { congressmen } = this.props
+    const { apiUrl, congressmen } = this.props
     const congressman = congressmen[currentCongressmanIndex]
     return answers.length > currentCongressmanIndex ? (
       <Answer
         answer={answers[currentCongressmanIndex]}
+        apiUrl={apiUrl}
         congressman={congressman}
         currentQuestionIndex={currentCongressmanIndex + 1}
         nextQuestionFn={this.goToNextQuestion}
@@ -41,6 +42,7 @@ export default class Questions extends Component {
       />
     ) : (
       <Question
+        apiUrl={apiUrl}
         congressman={congressman}
         currentQuestionIndex={currentCongressmanIndex + 1}
         questionCount={congressmen.length}
@@ -54,3 +56,5 @@ export default class Questions extends Component {
     this.setState({ answers })
   }
 }
+
+export default Questions

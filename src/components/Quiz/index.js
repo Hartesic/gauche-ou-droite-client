@@ -12,7 +12,7 @@ const DEFAULT_STATE = {
   fetchError: false
 }
 
-export default class Quiz extends Component {
+class Quiz extends Component {
   constructor () {
     super()
     this.state = DEFAULT_STATE
@@ -24,7 +24,7 @@ export default class Quiz extends Component {
 
   startGame () {
     // I feel pretty bad about this, but hey! it's a very little app...
-    axios.get('http://localhost:5000/')
+    axios.get(this.props.apiUrl)
       .then((response) => {
         const congressmen = response.data
         this.setState({ ...DEFAULT_STATE, congressmen })
@@ -36,6 +36,7 @@ export default class Quiz extends Component {
 
   getCurrentComponent () {
     const { answers, congressmen, fetchError } = this.state
+    const { apiUrl } = this.props
     if (fetchError) {
       return (
         <ErrorMessage
@@ -57,6 +58,7 @@ export default class Quiz extends Component {
         // ... start game:
         return (
           <Questions
+            apiUrl={apiUrl}
             congressmen={congressmen}
             storeAnswersFn={this.storeAnswers}
           />
@@ -85,3 +87,5 @@ export default class Quiz extends Component {
     this.setState({ answers })
   }
 }
+
+export default Quiz
