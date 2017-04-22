@@ -4,10 +4,10 @@ import Footer from './Footer'
 import Quiz from './Quiz'
 import Header from './Header'
 
-const App = ({ apiUrl }) => (
+const App = ({ apiUrl, questionCount }) => (
   <div>
     <Header />
-    <Quiz apiUrl={apiUrl} />
+    <Quiz apiUrl={apiUrl} questionCount={questionCount} />
     <Footer />
   </div>
 )

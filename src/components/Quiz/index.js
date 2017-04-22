@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 
-import ErrorMessage from './ErrorMessage'
+import FetchErrorMessage from './FetchErrorMessage'
 import Questions from './Questions'
 import Results from './Results'
 import Welcome from './Welcome'
@@ -24,7 +24,7 @@ class Quiz extends Component {
 
   startGame () {
     // I feel pretty bad about this, but hey! it's a very little app...
-    axios.get(this.props.apiUrl)
+    axios.get(this.props.apiUrl + '/' + this.props.questionCount)
       .then((response) => {
         const congressmen = response.data
         this.setState({ ...DEFAULT_STATE, congressmen })
@@ -39,7 +39,7 @@ class Quiz extends Component {
     const { apiUrl } = this.props
     if (fetchError) {
       return (
-        <ErrorMessage
+        <FetchErrorMessage
           tryAgainFn={this.startGame}
         />
       )
