@@ -2,7 +2,7 @@ import React from 'react'
 
 const StartButton = ({ onClickFn }) => (
   <div>
-    <button onClick={e => onClickFn()}>Test me, bro!</button>
+    <button className='button-start' onClick={e => onClickFn()}>Test me, bro!</button>
   </div>
 )
 

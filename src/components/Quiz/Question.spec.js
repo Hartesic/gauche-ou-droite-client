@@ -65,20 +65,18 @@ describe('<Question />', () => {
         selectAnswerFn={selectAnswerFn}
       />
     )
-    const leftButton = wrapper.find('button.button-left')
-    const rightButton = wrapper.find('button.button-right')
 
     // Left button
-    leftButton.simulate('click')
+    wrapper.find('.button-left').simulate('click')
     expect(selectAnswerFn.calledOnce)
-      .to.equal(true, 'button.button-left clicked more than once')
+      .to.equal(true, '.button-left clicked more than once')
     expect(selectAnswerFn.calledWith('gauche'))
-      .to.equal(true, 'button.button-left does not select correct answer')
+      .to.equal(true, '.button-left does not select correct answer')
     // Right button
-    rightButton.simulate('click')
+    wrapper.find('.button-right').simulate('click')
     expect(selectAnswerFn.calledTwice)
-      .to.equal(true, 'button.button-right clicked more than once')
+      .to.equal(true, '.button-right clicked more than once')
     expect(selectAnswerFn.calledWith('droite'))
-      .to.equal(true, 'button.button-right does not select correct answer')
+      .to.equal(true, '.button-right does not select correct answer')
   })
 })
