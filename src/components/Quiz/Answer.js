@@ -13,7 +13,7 @@ const Answer = ({ answer, apiUrl, congressman, currentQuestionIndex, nextQuestio
         <span className="answer-status-incorrect">Et non !</span>
       )}
     </div>
-    <CongressmanCard apiUrl={apiUrl} congressman={congressman} infosToDisplay={['photo', 'name', 'party']} />
+    <CongressmanCard apiUrl={apiUrl} congressman={congressman} infosToDisplay={['photo', 'name', 'party', 'successRate']} />
     <button className="answer-button button-playagain" onClick={nextQuestionFn}>Ok, suivant !</button>
   </div>
 )

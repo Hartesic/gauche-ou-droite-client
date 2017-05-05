@@ -1,6 +1,20 @@
+import axios from 'axios'
 import React, { Component } from 'react'
 
 class Results extends Component {
+  componentDidMount () {
+    const { answers, congressmen } = this.props
+    const data = congressmen.map((c, i) => {
+      return {
+        name: c.name,
+        result: c.side === answers[i] ? 'success' : 'fail'
+      }
+    })
+    axios.post(this.props.apiUrl + '/', { data })
+      .then((response) => { window.console.log(response.code) })
+      .catch((error) => { window.console.log(error)})
+  }
+
   getFormattedScore () {
     return this.getScore() + '/20'
   }

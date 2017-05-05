@@ -11,6 +11,7 @@ chai.use(chaiEnzyme())
 describe('<Answer />', () => {
   const apiUrl = 'api-url'
   const congressman = {
+    average_success: 0.69,
     name: 'congressman-name',
     parti: 'congressman-party',
     path: 'congressman-photo-path',
@@ -30,7 +31,7 @@ describe('<Answer />', () => {
         questionCount={questionCount}
       />
     )
-    const infosToDisplay = ['photo', 'name', 'party']
+    const infosToDisplay = ['photo', 'name', 'party', 'successRate']
 
     // <QuizProgress />
     const quizProgress = wrapper.find('QuizProgress')
@@ -49,7 +50,7 @@ describe('<Answer />', () => {
     expect(congressmanCard.prop('congressman'))
       .to.deep.equal(congressman, '<Answer /> does not pass congressman correctly to <CongressmanCard />')
     expect(congressmanCard.prop('infosToDisplay'))
-      .to.deep.equal(infosToDisplay, '<Answer /> does not just display congressman photo')
+      .to.deep.equal(infosToDisplay, '<Answer /> does not display specified infos')
     // <button />
     const button = wrapper.find('.button-playagain')
     expect(button)
