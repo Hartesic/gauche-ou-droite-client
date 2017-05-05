@@ -18,15 +18,15 @@ describe('<FetchErrorMessage />', () => {
 
   it('Should render appropriately', () => {
     // .message-error
-    expect(wrapper.find('.message-error'))
+    expect(wrapper.find('.fetch-error-message-text'))
       .to.have.length.to.be.at.least(1, '<FetchErrorMessage /> does not display any message')
     // .button-retry_fetch
-    expect(wrapper.find('.button-retry_fetch'))
+    expect(wrapper.find('.button-fetchagain'))
       .to.have.length(1, '<FetchErrorMessage /> does not display one button')
   })
 
   it('Should retry to fetch data on button click', () => {
-    wrapper.find('.button-retry_fetch').simulate('click')
+    wrapper.find('.button-fetchagain').simulate('click')
     expect(tryAgainFn.calledOnce)
       .to.equal(true, '<FetchErrorMessage /> does not call function to retry to fetch data')
   })

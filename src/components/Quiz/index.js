@@ -1,3 +1,4 @@
+import autobind from 'autobind-decorator'
 import axios from 'axios'
 import React, { Component } from 'react'
 
@@ -16,22 +17,6 @@ class Quiz extends Component {
   constructor () {
     super()
     this.state = DEFAULT_STATE
-
-    // Binding methods to `this`
-    this.startGame = this.startGame.bind(this)
-    this.storeAnswers = this.storeAnswers.bind(this)
-  }
-
-  startGame () {
-    // I feel pretty bad about this, but hey! it's a very little app...
-    axios.get(this.props.apiUrl + '/' + this.props.questionCount)
-      .then((response) => {
-        const congressmen = response.data
-        this.setState({ ...DEFAULT_STATE, congressmen })
-      })
-      .catch((error) => {
-        this.setState({ fetchError: true })
-      })
   }
 
   getCurrentComponent () {
@@ -77,12 +62,26 @@ class Quiz extends Component {
   render () {
     const currentComponent = this.getCurrentComponent()
     return (
-      <section>
+      <section className="container quiz-container">
         {currentComponent}
       </section>
     )
   }
 
+  @autobind
+  startGame () {
+    // I feel pretty bad about this, but hey! it's a very little app...
+    axios.get(this.props.apiUrl + '/' + this.props.questionCount)
+      .then((response) => {
+        const congressmen = response.data
+        this.setState({ ...DEFAULT_STATE, congressmen })
+      })
+      .catch((error) => {
+        this.setState({ fetchError: true })
+      })
+  }
+
+  @autobind
   storeAnswers (answers) {
     this.setState({ answers })
   }

@@ -51,7 +51,7 @@ describe('<Answer />', () => {
     expect(congressmanCard.prop('infosToDisplay'))
       .to.deep.equal(infosToDisplay, '<Answer /> does not just display congressman photo')
     // <button />
-    const button = wrapper.find('.button-replay')
+    const button = wrapper.find('.button-playagain')
     expect(button)
       .to.have.length(1, '<Answer /> does not display button to go to next question')
   })
@@ -69,7 +69,7 @@ describe('<Answer />', () => {
       />
     )
 
-    expect(wrapper.find('.answer-correct'))
+    expect(wrapper.find('.answer-status-correct'))
       .to.have.length(1, '<Answer /> display incorrect answer status')
   })
 
@@ -86,8 +86,8 @@ describe('<Answer />', () => {
     )
 
     // Replay button
-    wrapper.find('.button-replay').simulate('click')
+    wrapper.find('.button-playagain').simulate('click')
     expect(nextQuestionFn.calledOnce)
-      .to.equal(true, '.button-right not clicked once')
+      .to.equal(true, '.button-playagain not clicked once')
   })
 })

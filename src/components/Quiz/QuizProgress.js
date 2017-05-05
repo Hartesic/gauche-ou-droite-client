@@ -1,7 +1,7 @@
 import React from 'react'
 
 const QuizProgress = ({ currentQuestionIndex, questionCount }) => (
-  <p>{currentQuestionIndex} / {questionCount}</p>
+  <div className="quiz-progress">{currentQuestionIndex} / {questionCount}</div>
 )
 
 export default QuizProgress

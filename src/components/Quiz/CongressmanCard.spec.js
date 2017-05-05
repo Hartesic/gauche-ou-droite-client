@@ -54,12 +54,9 @@ describe('<CongressmanCard />', () => {
     // <img />
     expect(wrapper.find('img').prop('src'))
       .to.equal(congressmanPhotoUrl, '<CongressmanCard /> does not pass correct congressman photo url to <img />')
-    // <p />
-    expect(wrapper.find('p'))
-      .to.have.length(2, '<CongressmanCard /> display to much infos')
     expect(wrapper.containsAllMatchingElements([
-      <p>{congressman.name}</p>,
-      <p>{congressman.parti}</p>
+      <span>{congressman.name}</span>,
+      <span>{congressman.parti}</span>
     ])).to.equal(true, '<CongressmanCard /> does not display specified infos')
   })
 })

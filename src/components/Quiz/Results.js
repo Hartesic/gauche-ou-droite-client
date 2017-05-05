@@ -14,10 +14,10 @@ class Results extends Component {
   render () {
     const { playAgainFn } = this.props
     return (
-      <div>
-        <p>Pas besoin d'envoyer "fizik" au 81212 pour savoir si tu es physionomiste, on te dit tout ici :</p>
-        <strong>{this.getFormattedScore()}</strong>
-        <button onClick={e => playAgainFn()}>I can do better, test me again!</button>
+      <div className="results-container">
+        <div className="results-text">Pas besoin d'envoyer "fizik" au 81212 pour savoir si tu es physionomiste, on te dit tout ici :</div>
+        <div className="results-score">{this.getFormattedScore()}</div>
+        <button className="results-button button-playagain" onClick={e => playAgainFn()}>I can do better, test me again!</button>
       </div>
     )
   }

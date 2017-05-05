@@ -4,19 +4,17 @@ import CongressmanCard from './CongressmanCard'
 import QuizProgress from './QuizProgress'
 
 const Answer = ({ answer, apiUrl, congressman, currentQuestionIndex, nextQuestionFn, questionCount }) => (
-  <div>
+  <div className="container answer-container">
     <QuizProgress currentQuestionIndex={currentQuestionIndex} questionCount={questionCount} />
-    <div>
-      {
-        answer === congressman.side ? (
-          <p className='answer-correct'>"Bien vu !"</p>
-        ) : (
-          <p className='answer-incorrect'>"Et non !"</p>
-        )
-      }
+    <div className="answer-status">
+      {answer === congressman.side ? (
+        <span className="answer-status-correct">Bien vu !</span>
+      ) : (
+        <span className="answer-status-incorrect">Et non !</span>
+      )}
     </div>
     <CongressmanCard apiUrl={apiUrl} congressman={congressman} infosToDisplay={['photo', 'name', 'party']} />
-    <button className='button-replay' onClick={nextQuestionFn}>Ok, suivant !</button>
+    <button className="answer-button button-playagain" onClick={nextQuestionFn}>Ok, suivant !</button>
   </div>
 )
 

@@ -1,3 +1,4 @@
+import autobind from 'autobind-decorator'
 import React, { Component } from 'react'
 
 import Question from './Question'
@@ -12,11 +13,9 @@ class Questions extends Component {
   constructor () {
     super()
     this.state = DEFAULT_STATE
-
-    this.goToNextQuestion = this.goToNextQuestion.bind(this)
-    this.selectAnswer = this.selectAnswer.bind(this)
   }
 
+  @autobind
   goToNextQuestion () {
     const { answers } = this.state
     const { congressmen, storeAnswersFn } = this.props
@@ -51,6 +50,7 @@ class Questions extends Component {
     )
   }
 
+  @autobind
   selectAnswer (answer) {
     const answers = [ ...this.state.answers, answer ]
     this.setState({ answers })

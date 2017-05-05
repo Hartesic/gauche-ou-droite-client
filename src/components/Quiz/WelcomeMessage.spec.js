@@ -14,7 +14,7 @@ describe('<WelcomeMessage />', () => {
 
   it('Should render appropriately', () => {
     // .message-error
-    expect(wrapper.find('.message-welcome'))
+    expect(wrapper.find('.welcome-message-text'))
       .to.have.length.to.be.at.least(1, '<WelcomeMessage /> does not display any message')
   })
 })
