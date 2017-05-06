@@ -64,7 +64,7 @@ class Quiz extends PureComponent {
   render () {
     const currentComponent = this.getCurrentComponent()
     return (
-      <section className="container quiz-container">
+      <section className="quiz-container">
         {currentComponent}
       </section>
     )

@@ -1,0 +1,34 @@
+$grid-gutter-width: 30px;
+
+$bp-mobile: 767px;
+$bp-tablet: 1020px;
+$bp-laptop: 1230px;
+$bp-desktop: 1470px;
+
+$mobile: ($bp-mobile - 1);
+$tablet: ($bp-tablet + 1);
+$laptop: ($bp-laptop + 1);
+$desktop: ($bp-desktop + 1);
+$min-desktop: ($tablet - 1);
+
+$container-sm: (738px);
+$container-laptop: (960px);
+$container-md: (1170px);
+$container-lg: (1170px);
+
+// Anims
+$ease-material: cubic-bezier(0.4, 0, 0.2, 1);
+$global-ease: $ease-material;
+
+$bold: 700;
+
+// colors
+$blue: #4e66f4;
+$red: #ea4b4b;
+
+$phosphatesolid: 'phosphatesolid';
+$font-playfair: 'Playfair Display', serif;
+$font-light: 200;
+$font-regular: 400;
+$font-semi-bold: 500;
+$font-bold: 600;
