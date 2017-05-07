@@ -29,7 +29,7 @@ body{
       }
     }
   }
-  
+
   @include bp(xs){
     &:not(.home){
       .logo{

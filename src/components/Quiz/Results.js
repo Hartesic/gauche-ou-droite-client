@@ -26,21 +26,14 @@ class Results extends PureComponent {
   }
 
   render () {
-    const { playAgainFn } = this.props
+    const { playAgainFn, questionCount } = this.props
     return (
       <div className="results-container">
         <div className="logo">
           <img src="images/logo.svg" />
         </div>
-        <div className="success-or-not">
-          {this.getScore() >= 10 ? (
-              <div className="validator"></div>
-          ) : (
-              <div className="validator error"></div>
-          )}
-        </div>
-        <div className="results-text welcome-message-text text">Pas besoin d'envoyer "fizik" au 81212 pour savoir si tu es physionomiste, on te dit tout ici :</div>
-        <div className="results-score">{this.getFormattedScore()}</div>
+        <div className="results-text text">Pas besoin d'envoyer "fizik" au 81212 pour savoir si tu es physionomiste, on te dit tout ici :</div>
+        <div className="results-score">{this.getScore()} <span>/ {questionCount}</span></div>
         <button className="results-button button-playagain" onClick={e => playAgainFn()}>I can do better, test me again!</button>
       </div>
     )

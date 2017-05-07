@@ -11,7 +11,7 @@
     max-width: 95%;
   }
 
-  .congressman-container{
+  .congressman-photo{
     display: inline-block;
     border: solid 10px white;
     position: relative;
@@ -30,10 +30,10 @@
     //}
   }
 
-  .congress-man{
+  .answer-choice{
     position: relative;
 
-    .valid-or-not {
+    .answer-status {
       margin-bottom: 20px;
       text-align: center;
       width: 100%;
@@ -42,7 +42,7 @@
       letter-spacing: 1.2px;
       font-size: 25px;
     }
-    .candidat-infos{
+    .congressman-infos{
       margin-bottom: 10px;
       margin-top: 30px;
       text-align: center;
@@ -63,7 +63,7 @@
       }
     }
 
-    .success-pourcent{
+    .congressman-successrate{
       font-family: $font-playfair;
       display: block;
       margin-top: 5px;
@@ -155,7 +155,7 @@
       .question-choice{
         text-align: right;
 
-        .congressman-container{
+        .congressman-photo{
           left: 0 !important;
         }
       }
@@ -175,7 +175,7 @@
       .question-choice{
         text-align: left;
 
-        .congressman-container{
+        .congressman-photo{
           left: 0 !important;
         }
       }
@@ -186,14 +186,14 @@
     }
   }
 
-  .question-choice .congressman-container{
+  .question-choice .congressman-photo{
     .left-choice, .right-choice{
       display: none;
     }
   }
 
   @include bp(xs){
-    .question-choice .congressman-container{
+    .question-choice .congressman-photo{
       .left-choice {
         position: absolute;
         display: block;

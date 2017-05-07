@@ -3547,7 +3547,7 @@ button:active, .button:active {
   max-width: 95%;
 }
 /* line 14, ../../styles/_game.scss */
-.question-container .congressman-container, .answer-container .congressman-container, .results-container .congressman-container {
+.question-container .congressman-photo, .answer-container .congressman-photo, .results-container .congressman-photo {
   display: inline-block;
   border: solid 10px white;
   position: relative;
@@ -3558,11 +3558,11 @@ button:active, .button:active {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 /* line 33, ../../styles/_game.scss */
-.question-container .congress-man, .answer-container .congress-man, .results-container .congress-man {
+.question-container .answer-choice, .answer-container .answer-choice, .results-container .answer-choice {
   position: relative;
 }
 /* line 36, ../../styles/_game.scss */
-.question-container .congress-man .valid-or-not, .answer-container .congress-man .valid-or-not, .results-container .congress-man .valid-or-not {
+.question-container .answer-choice .answer-status, .answer-container .answer-choice .answer-status, .results-container .answer-choice .answer-status {
   margin-bottom: 20px;
   text-align: center;
   width: 100%;
@@ -3572,14 +3572,14 @@ button:active, .button:active {
   font-size: 25px;
 }
 /* line 45, ../../styles/_game.scss */
-.question-container .congress-man .candidat-infos, .answer-container .congress-man .candidat-infos, .results-container .congress-man .candidat-infos {
+.question-container .answer-choice .congressman-infos, .answer-container .answer-choice .congressman-infos, .results-container .answer-choice .congressman-infos {
   margin-bottom: 10px;
   margin-top: 30px;
   text-align: center;
   width: 100%;
 }
 /* line 51, ../../styles/_game.scss */
-.question-container .congress-man .candidat-infos .congressman-name, .answer-container .congress-man .candidat-infos .congressman-name, .results-container .congress-man .candidat-infos .congressman-name {
+.question-container .answer-choice .congressman-infos .congressman-name, .answer-container .answer-choice .congressman-infos .congressman-name, .results-container .answer-choice .congressman-infos .congressman-name {
   text-transform: uppercase;
   font-family: "phosphatesolid";
   letter-spacing: 1.2px;
@@ -3587,13 +3587,13 @@ button:active, .button:active {
   display: block;
 }
 /* line 59, ../../styles/_game.scss */
-.question-container .congress-man .candidat-infos .congressman-party, .answer-container .congress-man .candidat-infos .congressman-party, .results-container .congress-man .candidat-infos .congressman-party {
+.question-container .answer-choice .congressman-infos .congressman-party, .answer-container .answer-choice .congressman-infos .congressman-party, .results-container .answer-choice .congressman-infos .congressman-party {
   font-family: "Playfair Display", serif;
   letter-spacing: 1.2px;
   font-size: 16px;
 }
 /* line 66, ../../styles/_game.scss */
-.question-container .congress-man .success-pourcent, .answer-container .congress-man .success-pourcent, .results-container .congress-man .success-pourcent {
+.question-container .answer-choice .congressman-successrate, .answer-container .answer-choice .congressman-successrate, .results-container .answer-choice .congressman-successrate {
   font-family: "Playfair Display", serif;
   display: block;
   margin-top: 5px;
@@ -3701,7 +3701,7 @@ button:active, .button:active {
     text-align: right;
   }
   /* line 158, ../../styles/_game.scss */
-  .question-container.right-selected .question-choice .congressman-container, .answer-container.right-selected .question-choice .congressman-container, .results-container.right-selected .question-choice .congressman-container {
+  .question-container.right-selected .question-choice .congressman-photo, .answer-container.right-selected .question-choice .congressman-photo, .results-container.right-selected .question-choice .congressman-photo {
     left: 0 !important;
   }
 }
@@ -3719,7 +3719,7 @@ button:active, .button:active {
     text-align: left;
   }
   /* line 178, ../../styles/_game.scss */
-  .question-container.left-selected .question-choice .congressman-container, .answer-container.left-selected .question-choice .congressman-container, .results-container.left-selected .question-choice .congressman-container {
+  .question-container.left-selected .question-choice .congressman-photo, .answer-container.left-selected .question-choice .congressman-photo, .results-container.left-selected .question-choice .congressman-photo {
     left: 0 !important;
   }
 }
@@ -3728,12 +3728,12 @@ button:active, .button:active {
   opacity: .7;
 }
 /* line 190, ../../styles/_game.scss */
-.question-container .question-choice .congressman-container .left-choice, .question-container .question-choice .congressman-container .right-choice, .answer-container .question-choice .congressman-container .left-choice, .answer-container .question-choice .congressman-container .right-choice, .results-container .question-choice .congressman-container .left-choice, .results-container .question-choice .congressman-container .right-choice {
+.question-container .question-choice .congressman-photo .left-choice, .question-container .question-choice .congressman-photo .right-choice, .answer-container .question-choice .congressman-photo .left-choice, .answer-container .question-choice .congressman-photo .right-choice, .results-container .question-choice .congressman-photo .left-choice, .results-container .question-choice .congressman-photo .right-choice {
   display: none;
 }
 @media (max-width: 767px) {
   /* line 197, ../../styles/_game.scss */
-  .question-container .question-choice .congressman-container .left-choice, .answer-container .question-choice .congressman-container .left-choice, .results-container .question-choice .congressman-container .left-choice {
+  .question-container .question-choice .congressman-photo .left-choice, .answer-container .question-choice .congressman-photo .left-choice, .results-container .question-choice .congressman-photo .left-choice {
     position: absolute;
     display: block;
     top: 0;
@@ -3751,7 +3751,7 @@ button:active, .button:active {
     font-size: 32px;
   }
   /* line 211, ../../styles/_game.scss */
-  .question-container .question-choice .congressman-container .right-choice, .answer-container .question-choice .congressman-container .right-choice, .results-container .question-choice .congressman-container .right-choice {
+  .question-container .question-choice .congressman-photo .right-choice, .answer-container .question-choice .congressman-photo .right-choice, .results-container .question-choice .congressman-photo .right-choice {
     position: absolute;
     display: block;
     bottom: 0;
