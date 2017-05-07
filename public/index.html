@@ -20,7 +20,7 @@
         </div>
         <ul class="menu">
           <li>
-            <a href="#home" class="menu-item">Home</a>
+            <a href="#home" class="menu-item _reload">Recommencer ?</a>
           </li>
           <li class="current">
             <a href="#regles-du-jeu" class="menu-item tab-select">Regles du jeu</a>
@@ -83,7 +83,7 @@
         <div class="socials">
           <ul>
             <li>
-              <a href="">
+              <a class="share-link" href="https://www.facebook.com/sharer/sharer.php?u=%PUBLIC_URL%" target="_blank">
                 <svg height="26px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Black" transform="translate(-200.000000, -160.000000)" fill="#000000">
@@ -94,7 +94,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a class="share-link" href="https://twitter.com/home?status=%PUBLIC_URL%" target="_blank">
                 <svg height="26px" viewBox="0 0 48 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Black" transform="translate(-300.000000, -164.000000)" fill="#000000">
@@ -105,7 +105,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a class="share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=%PUBLIC_URL%&title=Gauche%20ou%20Droite%20?&summary=&source=" target="_blank">
                 <svg height="26px" viewBox="0 0 44 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Black" transform="translate(-702.000000, -265.000000)" fill="#000000">
@@ -141,8 +141,21 @@
             jQuery(jQuery(this).attr('href')).fadeIn();
         });
 
+        jQuery('.share-link').click(function(e){
+          e.preventDefault();
+          window.open(jQuery(this).attr('href'), 'socialShareWindow', 'height=450, width=550, top=' + (jQuery(window).height() / 2 - 275) + ', left=' + (jQuery(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+          return false;
+        });
+
+        jQuery('._reload').click(function(e){
+          e.preventDefault();
+          if(confirm('Es-tu sûr de vouloir recommencer ?'))
+            location.reload();
+        });
+
         jQuery('.burger, .close').click(function(e){
           e.preventDefault();
+          jQuery('.menu-burger').find('._reload').closest('li').css('display', (jQuery('.quiz-container > div').hasClass('welcome-container')) ? 'none' : 'block');
           jQuery('body').toggleClass('menu-open');
         });
       });
