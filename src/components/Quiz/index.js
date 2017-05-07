@@ -1,6 +1,6 @@
 import autobind from 'autobind-decorator'
 import axios from 'axios'
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
 import FetchErrorMessage from './FetchErrorMessage'
 import Questions from './Questions'
@@ -13,7 +13,7 @@ const DEFAULT_STATE = {
   fetchError: false
 }
 
-class Quiz extends Component {
+class Quiz extends PureComponent {
   constructor () {
     super()
     this.state = DEFAULT_STATE
@@ -21,7 +21,7 @@ class Quiz extends Component {
 
   getCurrentComponent () {
     const { answers, congressmen, fetchError } = this.state
-    const { apiUrl } = this.props
+    const { apiUrl, questionCount } = this.props
     if (fetchError) {
       return (
         <FetchErrorMessage
@@ -37,6 +37,7 @@ class Quiz extends Component {
             answers={answers}
             congressmen={congressmen}
             playAgainFn={this.startGame}
+            questionCount={questionCount}
           />
         )
       } else {

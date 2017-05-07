@@ -1,7 +1,7 @@
 import axios from 'axios'
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
-class Results extends Component {
+class Results extends PureComponent {
   componentDidMount () {
     const { answers, congressmen } = this.props
     const data = congressmen.map((c, i) => {
@@ -16,7 +16,7 @@ class Results extends Component {
   }
 
   getFormattedScore () {
-    return this.getScore() + '/20'
+    return this.getScore() + '/' + this.props.questionCount
   }
 
   getScore () {

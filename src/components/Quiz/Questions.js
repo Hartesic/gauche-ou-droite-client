@@ -1,5 +1,5 @@
 import autobind from 'autobind-decorator'
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
 import Question from './Question'
 import Answer from './Answer'
@@ -9,7 +9,7 @@ const DEFAULT_STATE = {
   currentCongressmanIndex: 0
 }
 
-class Questions extends Component {
+class Questions extends PureComponent {
   constructor () {
     super()
     this.state = DEFAULT_STATE
