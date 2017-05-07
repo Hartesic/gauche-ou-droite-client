@@ -1,0 +1,98 @@
+header{
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  padding: 0 40px;
+  left: 0;
+  z-index: 5;
+
+  @include bp(xs){
+    top: 30px;
+    padding: 0 30px;
+  }
+
+  .score{
+    position: fixed;
+    top: 0;
+    line-height: 30px;
+    font-size: 30px;
+    color: $blue;
+    background: white;
+    padding: 30px 35px 20px 35px;
+    right: 0;
+    margin-top: 0 !important;
+  }
+
+  .burger{
+    display: inline-block;
+    cursor: pointer;
+    float: left;
+      span{
+        background-color: rgb(255, 255, 255);
+        width: 44px;
+        display: block;
+        height: 5px;
+        margin-bottom: 8px;
+
+        &:nth-child(2){
+          width: 34px;
+        }
+        &:nth-child(3){
+          width: 24px;
+        }
+
+        @include bp(xs){
+          margin-bottom: 6px;
+          height: 4px;
+          width: 34px;
+          &:nth-child(2){
+            width: 24px;
+          }
+          &:nth-child(3){
+            width: 14px;
+          }
+        }
+      }
+  }
+
+  .socials{
+    float: right;
+
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li{
+        display: inline-block;
+        margin-left: 15px;
+        vertical-align: middle;
+
+        a {
+          @include transition(opacity .3s);
+          svg{
+            height: 22px;
+            width: auto;
+            path{
+              fill: white;
+            }
+
+            @include bp(xs){
+              height: 16px;
+            }
+          }
+
+          &:hover{
+            opacity: .7;
+          }
+        }
+      }
+    }
+  }
+}
+
+.game header .socials{
+  @include bp(xs){
+    display: none;
+  }
+}

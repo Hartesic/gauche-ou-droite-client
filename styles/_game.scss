@@ -1,0 +1,319 @@
+.question-container, .answer-container, .results-container{
+  .logo {
+    margin-bottom: 55px;
+    img{
+      height: 134px;
+    }
+  }
+
+  .v-center{
+    width: 868px;
+    max-width: 95%;
+  }
+
+  .congressman-photo{
+    display: inline-block;
+    border: solid 10px white;
+    position: relative;
+    z-index: 2;
+    box-shadow: 5px 5px 0 rgba(#000, .1);
+    //cursor: move;
+    //cursor: grab;
+    //cursor: -moz-grab;
+    //cursor: -webkit-grab;
+    @include transition(transform .3s, box-shadow .3s);
+
+    //&:active {
+    //  cursor: grabbing;
+    //  cursor: -moz-grabbing;
+    //  cursor: -webkit-grabbing;
+    //}
+  }
+
+  .answer-choice{
+    position: relative;
+
+    .answer-status {
+      margin-bottom: 20px;
+      text-align: center;
+      width: 100%;
+      text-transform: uppercase;
+      font-family: $phosphatesolid;
+      letter-spacing: 1.2px;
+      font-size: 25px;
+    }
+    .congressman-infos{
+      margin-bottom: 10px;
+      margin-top: 30px;
+      text-align: center;
+      width: 100%;
+
+      .congressman-name{
+        text-transform: uppercase;
+        font-family: $phosphatesolid;
+        letter-spacing: 1.2px;
+        font-size: 20px;
+        display: block;
+      }
+
+      .congressman-party{
+        font-family: $font-playfair;
+        letter-spacing: 1.2px;
+        font-size: 16px;
+      }
+    }
+
+    .congressman-successrate{
+      font-family: $font-playfair;
+      display: block;
+      margin-top: 5px;
+      opacity: .8;
+    }
+  }
+
+  .question-choice, .answer-container{
+    text-align: center;
+    width: 100%;
+    position: relative;
+
+    .bg-slider{
+      position: absolute;
+      top: 50%;
+      display: block;
+      height: 100%;
+      z-index: 1;
+      width: 100%;
+      left: 0;
+      @include translate(0, -50%);
+
+      &:after{
+        content: '';
+        width: calc(100% - 298px);
+        background-color: white;
+        height: 7px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%, -50%);
+      }
+
+      .bullet{
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        top: 50%;
+        @include translate(0, -50%);
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        left: 69px;
+        border: solid 5px white;
+        background-image: url('../images/arrow-left.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+
+
+        &.right{
+          background-image: url('../images/arrow-right.svg');
+          right: 69px;
+          left: auto;
+        }
+      }
+
+      @include bp(xs){
+        display: none;
+      }
+    }
+
+    .question-button{
+      position: absolute;
+      left: 0;
+      @include translate(-100%, -50%);
+      top: 50%;
+      margin-top: 0;
+
+      &.button-right{
+        left: auto;
+        right: 0;
+        @include translate(100%, -50%);
+        top: 50%;
+      }
+    }
+  }
+
+  .score, .quiz-progress, .results-score{
+    margin-top: 48px;
+  }
+
+  &.right-selected{
+    @include bp(min-sm){
+      .gauche, .droite{
+        width: 50% !important;
+      }
+      .question-choice{
+        text-align: right;
+
+        .congressman-photo{
+          left: 0 !important;
+        }
+      }
+    }
+
+
+    .gauche{
+      opacity: .7;
+    }
+  }
+
+  &.left-selected{
+    @include bp(min-sm){
+      .gauche, .droite{
+        width: 50% !important;
+      }
+      .question-choice{
+        text-align: left;
+
+        .congressman-photo{
+          left: 0 !important;
+        }
+      }
+    }
+
+    .droite{
+      opacity: .7;
+    }
+  }
+
+  .question-choice .congressman-photo{
+    .left-choice, .right-choice{
+      display: none;
+    }
+  }
+
+  @include bp(xs){
+    .question-choice .congressman-photo{
+      .left-choice {
+        position: absolute;
+        display: block;
+        top: 0;
+        @include translate(0, -100%);
+        margin-top: -40px;
+        text-align: center;
+        left: 0;
+        width: 100%;
+        text-transform: uppercase;
+        font-family: $phosphatesolid;
+        letter-spacing: 1.2px;
+        font-size: 32px;
+      }
+      .right-choice{
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        @include translate(0, 100%);
+        margin-bottom: -50px;
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+        font-family: $phosphatesolid;
+        letter-spacing: 1.2px;
+        font-size: 32px;
+      }
+    }
+  }
+
+  &.response{
+    .question-choice{
+      .validator{
+        transform: scale(1) translate(-50%, -50%);
+        -moz-transform: scale(1) translate(-50%, -50%);
+        -webkit-transform: scale(1) translate(-50%, -50%);
+        -ms-transform: scale(1) translate(-50%, -50%);
+
+        @include bp(xs){
+          height: 64px;
+          width: 64px;
+          background-size: 25px;
+          top: 5px;
+        }
+      }
+    }
+
+    @include bp(xs){
+      .v-center{
+        margin-top: 50px;
+
+        .button{
+          margin-top: 90px;
+        }
+      }
+    }
+  }
+}
+
+.results-container {
+  .results-text{
+
+  }
+  .results-score {
+    margin-top: 10px;
+  }
+}
+
+.score, .quiz-progress, .results-score{
+  color: white;
+  font-family: $phosphatesolid;
+  font-size: 45px;
+  letter-spacing: 1px;
+
+  span{
+    font-size: 30px;
+  }
+}
+
+body{
+  &.response-wrong{
+    .validator{
+      background-image: url('../images/wrong.svg');
+    }
+  }
+
+  &.response-correct{
+    .validator{
+      background-image: url('../images/correct.svg');
+    }
+  }
+}
+
+.results-container{
+  .logo {
+    img{
+      height: 134px;
+    }
+
+    @include bp(xs){
+      display: none;
+    }
+  }
+
+  .validator{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 30px;
+    z-index: 4;
+    border-radius: 50%;
+    background: white;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/correct.svg');
+
+    &.error{
+      background-image: url('../images/wrong.svg');
+    }
+  }
+}
