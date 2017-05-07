@@ -34,8 +34,9 @@
     position: relative;
 
     .answer-status {
-      margin-bottom: 20px;
+      margin-bottom: 35px;
       text-align: center;
+      position: relative;
       width: 100%;
       text-transform: uppercase;
       font-family: $phosphatesolid;
@@ -174,7 +175,7 @@
   }
 
   .score, .quiz-progress, .results-score{
-    margin-top: 48px;
+    margin-top: 30px;
   }
 
   &.right-selected{
@@ -346,6 +347,34 @@ body{
     background-image: url('../images/correct.svg');
 
     &.error{
+      background-image: url('../images/wrong.svg');
+    }
+  }
+}
+
+.answer-status-correct,
+.answer-status-incorrect{
+  &:after{
+    content: '';
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    margin-top: 8px;
+    height: 60px;
+    width: 60px;
+    z-index: 4;
+    border-radius: 50%;
+    background: white;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/correct.svg');
+    background-size: 20px;
+    @include translate(-50%, 0);
+  }
+
+  &.answer-status-incorrect{
+    &:after{
       background-image: url('../images/wrong.svg');
     }
   }
