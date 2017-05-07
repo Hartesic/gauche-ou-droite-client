@@ -1,0 +1,12 @@
+@include bp(xs){
+  .question-container,
+  .answer-container,
+  .results-container{
+    .logo,
+    .quiz-progress {
+      display: none;
+    }
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}

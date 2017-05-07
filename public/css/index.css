@@ -3687,52 +3687,93 @@ button:active, .button:active {
   transform: translate(100%, -50%);
   top: 50%;
 }
-/* line 146, ../../styles/_game.scss */
+@media (max-width: 767px) {
+  /* line 130, ../../styles/_game.scss */
+  .question-container .question-choice .question-button, .question-container .answer-container .question-button, .answer-container .question-choice .question-button, .answer-container .answer-container .question-button, .results-container .question-choice .question-button, .results-container .answer-container .question-button {
+    top: 0;
+    -webkit-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    -o-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    margin-top: -40px;
+    text-align: center;
+    left: 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 32px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    letter-spacing: 2px;
+    padding: 0;
+  }
+  /* line 159, ../../styles/_game.scss */
+  .question-container .question-choice .question-button:hover, .question-container .answer-container .question-button:hover, .answer-container .question-choice .question-button:hover, .answer-container .answer-container .question-button:hover, .results-container .question-choice .question-button:hover, .results-container .answer-container .question-button:hover {
+    background: transparent;
+    box-shadow: none;
+    -webkit-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    -o-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+  }
+  /* line 165, ../../styles/_game.scss */
+  .question-container .question-choice .question-button.button-right, .question-container .answer-container .question-button.button-right, .answer-container .question-choice .question-button.button-right, .answer-container .answer-container .question-button.button-right, .results-container .question-choice .question-button.button-right, .results-container .answer-container .question-button.button-right {
+    bottom: 0;
+    top: auto;
+    -webkit-transform: translate(0, 100%);
+    -ms-transform: translate(0, 100%);
+    -o-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    margin-bottom: -50px;
+    margin-top: 0;
+  }
+}
+/* line 176, ../../styles/_game.scss */
 .question-container .score, .question-container .quiz-progress, .question-container .results-score, .answer-container .score, .answer-container .quiz-progress, .answer-container .results-score, .results-container .score, .results-container .quiz-progress, .results-container .results-score {
   margin-top: 48px;
 }
 @media (min-width: 768px) {
-  /* line 152, ../../styles/_game.scss */
+  /* line 182, ../../styles/_game.scss */
   .question-container.right-selected .gauche, .question-container.right-selected .droite, .answer-container.right-selected .gauche, .answer-container.right-selected .droite, .results-container.right-selected .gauche, .results-container.right-selected .droite {
     width: 50% !important;
   }
-  /* line 155, ../../styles/_game.scss */
+  /* line 185, ../../styles/_game.scss */
   .question-container.right-selected .question-choice, .answer-container.right-selected .question-choice, .results-container.right-selected .question-choice {
     text-align: right;
   }
-  /* line 158, ../../styles/_game.scss */
+  /* line 188, ../../styles/_game.scss */
   .question-container.right-selected .question-choice .congressman-photo, .answer-container.right-selected .question-choice .congressman-photo, .results-container.right-selected .question-choice .congressman-photo {
     left: 0 !important;
   }
 }
-/* line 165, ../../styles/_game.scss */
+/* line 195, ../../styles/_game.scss */
 .question-container.right-selected .gauche, .answer-container.right-selected .gauche, .results-container.right-selected .gauche {
   opacity: .7;
 }
 @media (min-width: 768px) {
-  /* line 172, ../../styles/_game.scss */
+  /* line 202, ../../styles/_game.scss */
   .question-container.left-selected .gauche, .question-container.left-selected .droite, .answer-container.left-selected .gauche, .answer-container.left-selected .droite, .results-container.left-selected .gauche, .results-container.left-selected .droite {
     width: 50% !important;
   }
-  /* line 175, ../../styles/_game.scss */
+  /* line 205, ../../styles/_game.scss */
   .question-container.left-selected .question-choice, .answer-container.left-selected .question-choice, .results-container.left-selected .question-choice {
     text-align: left;
   }
-  /* line 178, ../../styles/_game.scss */
+  /* line 208, ../../styles/_game.scss */
   .question-container.left-selected .question-choice .congressman-photo, .answer-container.left-selected .question-choice .congressman-photo, .results-container.left-selected .question-choice .congressman-photo {
     left: 0 !important;
   }
 }
-/* line 184, ../../styles/_game.scss */
+/* line 214, ../../styles/_game.scss */
 .question-container.left-selected .droite, .answer-container.left-selected .droite, .results-container.left-selected .droite {
   opacity: .7;
 }
-/* line 190, ../../styles/_game.scss */
+/* line 220, ../../styles/_game.scss */
 .question-container .question-choice .congressman-photo .left-choice, .question-container .question-choice .congressman-photo .right-choice, .answer-container .question-choice .congressman-photo .left-choice, .answer-container .question-choice .congressman-photo .right-choice, .results-container .question-choice .congressman-photo .left-choice, .results-container .question-choice .congressman-photo .right-choice {
   display: none;
 }
 @media (max-width: 767px) {
-  /* line 197, ../../styles/_game.scss */
+  /* line 227, ../../styles/_game.scss */
   .question-container .question-choice .congressman-photo .left-choice, .answer-container .question-choice .congressman-photo .left-choice, .results-container .question-choice .congressman-photo .left-choice {
     position: absolute;
     display: block;
@@ -3750,7 +3791,7 @@ button:active, .button:active {
     letter-spacing: 1.2px;
     font-size: 32px;
   }
-  /* line 211, ../../styles/_game.scss */
+  /* line 241, ../../styles/_game.scss */
   .question-container .question-choice .congressman-photo .right-choice, .answer-container .question-choice .congressman-photo .right-choice, .results-container .question-choice .congressman-photo .right-choice {
     position: absolute;
     display: block;
@@ -3769,7 +3810,7 @@ button:active, .button:active {
     font-size: 32px;
   }
 }
-/* line 230, ../../styles/_game.scss */
+/* line 260, ../../styles/_game.scss */
 .question-container.response .question-choice .validator, .answer-container.response .question-choice .validator, .results-container.response .question-choice .validator {
   transform: scale(1) translate(-50%, -50%);
   -moz-transform: scale(1) translate(-50%, -50%);
@@ -3777,7 +3818,7 @@ button:active, .button:active {
   -ms-transform: scale(1) translate(-50%, -50%);
 }
 @media (max-width: 767px) {
-  /* line 230, ../../styles/_game.scss */
+  /* line 260, ../../styles/_game.scss */
   .question-container.response .question-choice .validator, .answer-container.response .question-choice .validator, .results-container.response .question-choice .validator {
     height: 64px;
     width: 64px;
@@ -3786,53 +3827,53 @@ button:active, .button:active {
   }
 }
 @media (max-width: 767px) {
-  /* line 246, ../../styles/_game.scss */
+  /* line 276, ../../styles/_game.scss */
   .question-container.response .v-center, .answer-container.response .v-center, .results-container.response .v-center {
     margin-top: 50px;
   }
-  /* line 249, ../../styles/_game.scss */
+  /* line 279, ../../styles/_game.scss */
   .question-container.response .v-center .button, .answer-container.response .v-center .button, .results-container.response .v-center .button {
     margin-top: 90px;
   }
 }
 
-/* line 261, ../../styles/_game.scss */
+/* line 291, ../../styles/_game.scss */
 .results-container .results-score {
   margin-top: 10px;
 }
 
-/* line 266, ../../styles/_game.scss */
+/* line 296, ../../styles/_game.scss */
 .score, .quiz-progress, .results-score {
   color: white;
   font-family: "phosphatesolid";
   font-size: 45px;
   letter-spacing: 1px;
 }
-/* line 272, ../../styles/_game.scss */
+/* line 302, ../../styles/_game.scss */
 .score span, .quiz-progress span, .results-score span {
   font-size: 30px;
 }
 
-/* line 279, ../../styles/_game.scss */
+/* line 309, ../../styles/_game.scss */
 body.response-wrong .validator {
   background-image: url("../images/wrong.svg");
 }
-/* line 285, ../../styles/_game.scss */
+/* line 315, ../../styles/_game.scss */
 body.response-correct .validator {
   background-image: url("../images/correct.svg");
 }
 
-/* line 293, ../../styles/_game.scss */
+/* line 323, ../../styles/_game.scss */
 .results-container .logo img {
   height: 134px;
 }
 @media (max-width: 767px) {
-  /* line 292, ../../styles/_game.scss */
+  /* line 322, ../../styles/_game.scss */
   .results-container .logo {
     display: none;
   }
 }
-/* line 302, ../../styles/_game.scss */
+/* line 332, ../../styles/_game.scss */
 .results-container .validator {
   position: relative;
   height: 100px;
@@ -3846,7 +3887,7 @@ body.response-correct .validator {
   background-position: center;
   background-image: url("../images/correct.svg");
 }
-/* line 315, ../../styles/_game.scss */
+/* line 345, ../../styles/_game.scss */
 .results-container .validator.error {
   background-image: url("../images/wrong.svg");
 }
@@ -3858,9 +3899,12 @@ body.menu-open .menu-burger {
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
   z-index: 6;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
-/* line 8, ../../styles/_menu.scss */
+/* line 9, ../../styles/_menu.scss */
 .menu-burger {
   position: fixed;
   height: 100%;
@@ -3874,11 +3918,11 @@ body.menu-open .menu-burger {
   -ms-transform: translate(-100%, 0);
   -o-transform: translate(-100%, 0);
   transform: translate(-100%, 0);
-  -webkit-transition: transform 0.6s;
-  -o-transition: transform 0.6s;
-  transition: transform 0.6s;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
 }
-/* line 20, ../../styles/_menu.scss */
+/* line 21, ../../styles/_menu.scss */
 .menu-burger .left-side, .menu-burger .right-side {
   position: fixed;
   height: 100%;
@@ -3886,12 +3930,12 @@ body.menu-open .menu-burger {
   top: 0;
   left: 0;
 }
-/* line 28, ../../styles/_menu.scss */
+/* line 29, ../../styles/_menu.scss */
 .menu-burger .right-side {
   right: 0;
   left: auto;
 }
-/* line 32, ../../styles/_menu.scss */
+/* line 33, ../../styles/_menu.scss */
 .menu-burger .right-side > div {
   text-align: right;
   position: absolute;
@@ -3905,7 +3949,7 @@ body.menu-open .menu-burger {
   transform: translate(0, -50%);
   height: calc(100% - 180px);
 }
-/* line 43, ../../styles/_menu.scss */
+/* line 44, ../../styles/_menu.scss */
 .menu-burger .right-side .h2, .menu-burger .right-side .h3 {
   font-family: "phosphatesolid";
   font-size: 28px;
@@ -3913,12 +3957,12 @@ body.menu-open .menu-burger {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-/* line 51, ../../styles/_menu.scss */
+/* line 52, ../../styles/_menu.scss */
 .menu-burger .right-side .h3 {
   opacity: .6;
   font-size: 20px;
 }
-/* line 56, ../../styles/_menu.scss */
+/* line 57, ../../styles/_menu.scss */
 .menu-burger .right-side p {
   margin-bottom: 20px;
   font-family: "Playfair Display", serif;
@@ -3928,12 +3972,12 @@ body.menu-open .menu-burger {
   color: #787979;
   max-width: 500px;
 }
-/* line 65, ../../styles/_menu.scss */
+/* line 66, ../../styles/_menu.scss */
 .menu-burger .right-side p strong {
   color: #000;
   font-weight: bold;
 }
-/* line 71, ../../styles/_menu.scss */
+/* line 72, ../../styles/_menu.scss */
 .menu-burger .right-side .members {
   list-style: none;
   padding: 0;
@@ -3941,13 +3985,13 @@ body.menu-open .menu-burger {
   display: block;
   margin: 30px 0 0 0;
 }
-/* line 78, ../../styles/_menu.scss */
+/* line 79, ../../styles/_menu.scss */
 .menu-burger .right-side .members li {
   font-size: 18px;
   margin-bottom: 35px;
   font-family: "Playfair Display", serif;
 }
-/* line 82, ../../styles/_menu.scss */
+/* line 83, ../../styles/_menu.scss */
 .menu-burger .right-side .members li .name {
   color: #ea4b4b;
   font-weight: bold;
@@ -3956,7 +4000,7 @@ body.menu-open .menu-burger {
   position: relative;
   padding-right: 50px;
 }
-/* line 90, ../../styles/_menu.scss */
+/* line 91, ../../styles/_menu.scss */
 .menu-burger .right-side .members li .name:after {
   content: '';
   position: absolute;
@@ -3966,14 +4010,14 @@ body.menu-open .menu-burger {
   width: 40px;
   right: 0;
 }
-/* line 100, ../../styles/_menu.scss */
+/* line 101, ../../styles/_menu.scss */
 .menu-burger .right-side .members li .job {
   color: #787979;
   font-size: 15px;
   opacity: .8;
   font-style: italic;
 }
-/* line 110, ../../styles/_menu.scss */
+/* line 111, ../../styles/_menu.scss */
 .menu-burger .close-side {
   position: absolute;
   top: 0;
@@ -3982,7 +4026,7 @@ body.menu-open .menu-burger {
   height: 100%;
   border-right: solid 2px rgba(234, 75, 75, 0.3);
 }
-/* line 117, ../../styles/_menu.scss */
+/* line 118, ../../styles/_menu.scss */
 .menu-burger .close-side .close {
   margin-top: 0;
   height: 120px;
@@ -3994,7 +4038,7 @@ body.menu-open .menu-burger {
   width: 118px;
   background: url("../images/close.svg") no-repeat center;
 }
-/* line 130, ../../styles/_menu.scss */
+/* line 131, ../../styles/_menu.scss */
 .menu-burger .menu {
   position: absolute;
   left: 117px;
@@ -4004,7 +4048,7 @@ body.menu-open .menu-burger {
   text-align: left;
   margin: 0;
 }
-/* line 139, ../../styles/_menu.scss */
+/* line 140, ../../styles/_menu.scss */
 .menu-burger .menu li {
   font-family: "phosphatesolid";
   font-size: 28px;
@@ -4013,7 +4057,7 @@ body.menu-open .menu-burger {
   line-height: 68px;
   position: relative;
 }
-/* line 147, ../../styles/_menu.scss */
+/* line 148, ../../styles/_menu.scss */
 .menu-burger .menu li .menu-item {
   opacity: .7;
   letter-spacing: 1px;
@@ -4022,12 +4066,12 @@ body.menu-open .menu-burger {
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-/* line 153, ../../styles/_menu.scss */
+/* line 154, ../../styles/_menu.scss */
 .menu-burger .menu li .menu-item:hover, .menu-burger .menu li .menu-item:active, .menu-burger .menu li .menu-item:focus {
   opacity: 1;
   text-decoration: none;
 }
-/* line 159, ../../styles/_menu.scss */
+/* line 160, ../../styles/_menu.scss */
 .menu-burger .menu li:before {
   content: '';
   width: 4px;
@@ -4045,13 +4089,69 @@ body.menu-open .menu-burger {
   -o-transition: height 0.3s;
   transition: height 0.3s;
 }
-/* line 173, ../../styles/_menu.scss */
+/* line 174, ../../styles/_menu.scss */
 .menu-burger .menu li.current .menu-item {
   opacity: 1;
 }
-/* line 177, ../../styles/_menu.scss */
+/* line 178, ../../styles/_menu.scss */
 .menu-burger .menu li.current:before {
   height: 100%;
+}
+@media (max-width: 767px) {
+  /* line 9, ../../styles/_menu.scss */
+  .menu-burger {
+    border-width: 17px;
+  }
+  /* line 187, ../../styles/_menu.scss */
+  .menu-burger .left-side {
+    width: 100%;
+  }
+  /* line 190, ../../styles/_menu.scss */
+  .menu-burger .left-side .close-side {
+    width: 60px;
+  }
+  /* line 193, ../../styles/_menu.scss */
+  .menu-burger .left-side .close-side .close {
+    width: 60px;
+    height: 60px;
+    background-size: 20px;
+  }
+  /* line 200, ../../styles/_menu.scss */
+  .menu-burger .left-side .menu {
+    top: 19px;
+    left: 57px;
+    position: relative;
+  }
+  /* line 205, ../../styles/_menu.scss */
+  .menu-burger .left-side .menu li {
+    font-size: 18px;
+    padding-left: 35px;
+    height: 40px;
+    line-height: 48px;
+  }
+  /* line 214, ../../styles/_menu.scss */
+  .menu-burger .right-side {
+    z-index: 6;
+    border-top: solid 2px rgba(234, 75, 75, 0.3);
+    width: calc(100% - 60px);
+    height: calc(100% - 200px);
+    bottom: 0;
+    padding-top: 10px;
+    top: auto;
+  }
+  /* line 222, ../../styles/_menu.scss */
+  .menu-burger .right-side > div {
+    position: relative;
+    padding: 0 20px;
+    top: auto;
+    transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    bottom: auto;
+    height: 100%;
+    right: auto;
+  }
 }
 
 /* line 1, ../../styles/_header.scss */
@@ -4165,6 +4265,25 @@ header .socials ul li a:hover {
 @media (max-width: 767px) {
   /* line 94, ../../styles/_header.scss */
   .game header .socials {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 2, ../../styles/_mobile.scss */
+  .question-container,
+  .answer-container,
+  .results-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  /* line 5, ../../styles/_mobile.scss */
+  .question-container .logo,
+  .question-container .quiz-progress,
+  .answer-container .logo,
+  .answer-container .quiz-progress,
+  .results-container .logo,
+  .results-container .quiz-progress {
     display: none;
   }
 }

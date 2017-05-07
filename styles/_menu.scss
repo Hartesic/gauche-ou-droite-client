@@ -2,6 +2,7 @@ body.menu-open{
   .menu-burger {
     @include translate(0, 0);
     z-index: 6;
+    @include transition(all .6s);
   }
 }
 
@@ -15,7 +16,7 @@ body.menu-open{
   background: white;
   border: solid 20px $blue;
   @include translate(-100%, 0);
-  @include transition(transform .6s);
+  @include transition(all .6s);
 
   .left-side, .right-side{
     position: fixed;
@@ -177,6 +178,58 @@ body.menu-open{
         &:before{
           height: 100%;
         }
+      }
+    }
+  }
+
+  @include bp(xs){
+    border-width: 17px;
+    .left-side{
+      width: 100%;
+
+      .close-side{
+        width: 60px;
+
+        .close{
+          width: 60px;
+          height: 60px;
+          background-size: 20px;
+        }
+      }
+
+      .menu{
+        top: 19px;
+        left: 57px;
+        position: relative;
+
+        li{
+          font-size: 18px;
+          padding-left: 35px;
+          height: 40px;
+          line-height: 48px;
+        }
+      }
+    }
+
+    .right-side{
+      z-index: 6;
+      border-top: solid 2px rgba(234, 75, 75, 0.3);
+      width: calc(100% - 60px);
+      height: calc(100% - 200px);
+      bottom: 0;
+      padding-top: 10px;
+      top: auto;
+      > div{
+        position: relative;
+        padding: 0 20px;
+        top: auto;
+        transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -webkit-transform: none;
+        bottom: auto;
+        height: 100%;
+        right: auto;
       }
     }
   }
