@@ -35,6 +35,7 @@ class Quiz extends PureComponent {
         return (
           <Results
             answers={answers}
+            apiUrl={apiUrl}
             congressmen={congressmen}
             playAgainFn={this.startGame}
             questionCount={questionCount}
