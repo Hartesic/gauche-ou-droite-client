@@ -4132,39 +4132,59 @@ body.menu-open .menu-burger {
 .menu-burger .menu li.current:before {
   height: 100%;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 186, ../../styles/_menu.scss */
+  .menu-burger .left-side {
+    width: 55%;
+  }
+  /* line 190, ../../styles/_menu.scss */
+  .menu-burger .right-side {
+    width: 42%;
+  }
+  /* line 193, ../../styles/_menu.scss */
+  .menu-burger .right-side > div {
+    right: 20px;
+  }
+  /* line 198, ../../styles/_menu.scss */
+  .menu-burger .menu li {
+    font-size: 22px;
+    height: 55px;
+    line-height: 55px;
+  }
+}
 @media (max-width: 767px) {
   /* line 9, ../../styles/_menu.scss */
   .menu-burger {
     border-width: 17px;
   }
-  /* line 187, ../../styles/_menu.scss */
+  /* line 207, ../../styles/_menu.scss */
   .menu-burger .left-side {
     width: 100%;
   }
-  /* line 190, ../../styles/_menu.scss */
+  /* line 210, ../../styles/_menu.scss */
   .menu-burger .left-side .close-side {
     width: 60px;
   }
-  /* line 193, ../../styles/_menu.scss */
+  /* line 213, ../../styles/_menu.scss */
   .menu-burger .left-side .close-side .close {
     width: 60px;
     height: 60px;
     background-size: 20px;
   }
-  /* line 200, ../../styles/_menu.scss */
+  /* line 220, ../../styles/_menu.scss */
   .menu-burger .left-side .menu {
     top: 19px;
     left: 57px;
     position: relative;
   }
-  /* line 205, ../../styles/_menu.scss */
+  /* line 225, ../../styles/_menu.scss */
   .menu-burger .left-side .menu li {
     font-size: 18px;
     padding-left: 35px;
     height: 40px;
     line-height: 48px;
   }
-  /* line 214, ../../styles/_menu.scss */
+  /* line 234, ../../styles/_menu.scss */
   .menu-burger .right-side {
     z-index: 6;
     border-top: solid 2px rgba(234, 75, 75, 0.3);
@@ -4174,7 +4194,7 @@ body.menu-open .menu-burger {
     padding-top: 10px;
     top: auto;
   }
-  /* line 222, ../../styles/_menu.scss */
+  /* line 242, ../../styles/_menu.scss */
   .menu-burger .right-side > div {
     position: relative;
     padding: 0 20px;

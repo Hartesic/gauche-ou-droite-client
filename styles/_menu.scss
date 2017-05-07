@@ -182,6 +182,26 @@ body.menu-open{
     }
   }
 
+  @include bp(sm){
+    .left-side{
+      width: 55%;
+    }
+
+    .right-side{
+      width: 42%;
+
+      > div{
+        right: 20px;
+      }
+    }
+
+    .menu li{
+      font-size: 22px;
+      height: 55px;
+      line-height: 55px;
+    }
+  }
+
   @include bp(xs){
     border-width: 17px;
     .left-side{
