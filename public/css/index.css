@@ -3547,7 +3547,7 @@ button:active, .button:active {
   max-width: 95%;
 }
 /* line 14, ../../styles/_game.scss */
-.question-container .congressman-photo, .answer-container .congressman-photo, .results-container .congressman-photo {
+.question-container img.congressman-photo, .answer-container img.congressman-photo, .results-container img.congressman-photo {
   display: inline-block;
   border: solid 10px white;
   position: relative;
@@ -3742,7 +3742,7 @@ button:active, .button:active {
     text-align: right;
   }
   /* line 188, ../../styles/_game.scss */
-  .question-container.right-selected .question-choice .congressman-photo, .answer-container.right-selected .question-choice .congressman-photo, .results-container.right-selected .question-choice .congressman-photo {
+  .question-container.right-selected .question-choice img.congressman-photo, .answer-container.right-selected .question-choice img.congressman-photo, .results-container.right-selected .question-choice img.congressman-photo {
     left: 0 !important;
   }
 }
@@ -3760,7 +3760,7 @@ button:active, .button:active {
     text-align: left;
   }
   /* line 208, ../../styles/_game.scss */
-  .question-container.left-selected .question-choice .congressman-photo, .answer-container.left-selected .question-choice .congressman-photo, .results-container.left-selected .question-choice .congressman-photo {
+  .question-container.left-selected .question-choice img.congressman-photo, .answer-container.left-selected .question-choice img.congressman-photo, .results-container.left-selected .question-choice img.congressman-photo {
     left: 0 !important;
   }
 }
@@ -3769,12 +3769,12 @@ button:active, .button:active {
   opacity: .7;
 }
 /* line 220, ../../styles/_game.scss */
-.question-container .question-choice .congressman-photo .left-choice, .question-container .question-choice .congressman-photo .right-choice, .answer-container .question-choice .congressman-photo .left-choice, .answer-container .question-choice .congressman-photo .right-choice, .results-container .question-choice .congressman-photo .left-choice, .results-container .question-choice .congressman-photo .right-choice {
+.question-container .question-choice img.congressman-photo .left-choice, .question-container .question-choice img.congressman-photo .right-choice, .answer-container .question-choice img.congressman-photo .left-choice, .answer-container .question-choice img.congressman-photo .right-choice, .results-container .question-choice img.congressman-photo .left-choice, .results-container .question-choice img.congressman-photo .right-choice {
   display: none;
 }
 @media (max-width: 767px) {
   /* line 227, ../../styles/_game.scss */
-  .question-container .question-choice .congressman-photo .left-choice, .answer-container .question-choice .congressman-photo .left-choice, .results-container .question-choice .congressman-photo .left-choice {
+  .question-container .question-choice img.congressman-photo .left-choice, .answer-container .question-choice img.congressman-photo .left-choice, .results-container .question-choice img.congressman-photo .left-choice {
     position: absolute;
     display: block;
     top: 0;
@@ -3792,7 +3792,7 @@ button:active, .button:active {
     font-size: 32px;
   }
   /* line 241, ../../styles/_game.scss */
-  .question-container .question-choice .congressman-photo .right-choice, .answer-container .question-choice .congressman-photo .right-choice, .results-container .question-choice .congressman-photo .right-choice {
+  .question-container .question-choice img.congressman-photo .right-choice, .answer-container .question-choice img.congressman-photo .right-choice, .results-container .question-choice img.congressman-photo .right-choice {
     position: absolute;
     display: block;
     bottom: 0;
@@ -3837,43 +3837,48 @@ button:active, .button:active {
   }
 }
 
-/* line 291, ../../styles/_game.scss */
+/* line 286, ../../styles/_game.scss */
+.answer-container .logo {
+  display: none;
+}
+
+/* line 294, ../../styles/_game.scss */
 .results-container .results-score {
   margin-top: 10px;
 }
 
-/* line 296, ../../styles/_game.scss */
+/* line 299, ../../styles/_game.scss */
 .score, .quiz-progress, .results-score {
   color: white;
   font-family: "phosphatesolid";
   font-size: 45px;
   letter-spacing: 1px;
 }
-/* line 302, ../../styles/_game.scss */
+/* line 305, ../../styles/_game.scss */
 .score span, .quiz-progress span, .results-score span {
   font-size: 30px;
 }
 
-/* line 309, ../../styles/_game.scss */
+/* line 312, ../../styles/_game.scss */
 body.response-wrong .validator {
   background-image: url("../images/wrong.svg");
 }
-/* line 315, ../../styles/_game.scss */
+/* line 318, ../../styles/_game.scss */
 body.response-correct .validator {
   background-image: url("../images/correct.svg");
 }
 
-/* line 323, ../../styles/_game.scss */
+/* line 326, ../../styles/_game.scss */
 .results-container .logo img {
   height: 134px;
 }
 @media (max-width: 767px) {
-  /* line 322, ../../styles/_game.scss */
+  /* line 325, ../../styles/_game.scss */
   .results-container .logo {
     display: none;
   }
 }
-/* line 332, ../../styles/_game.scss */
+/* line 335, ../../styles/_game.scss */
 .results-container .validator {
   position: relative;
   height: 100px;
@@ -3887,7 +3892,7 @@ body.response-correct .validator {
   background-position: center;
   background-image: url("../images/correct.svg");
 }
-/* line 345, ../../styles/_game.scss */
+/* line 348, ../../styles/_game.scss */
 .results-container .validator.error {
   background-image: url("../images/wrong.svg");
 }
@@ -4290,49 +4295,52 @@ header .socials ul li a:hover {
 @media (max-width: 360px) {
   /* line 18, ../../styles/_mobile.scss */
   .question-container .congressman-photo img,
+  .question-container img.congressman-photo,
   .answer-container .congressman-photo img,
-  .results-container .congressman-photo img {
+  .answer-container img.congressman-photo,
+  .results-container .congressman-photo img,
+  .results-container img.congressman-photo {
     max-width: 145px;
   }
-  /* line 22, ../../styles/_mobile.scss */
+  /* line 23, ../../styles/_mobile.scss */
   .question-container .question-container .question-choice .question-button,
   .answer-container .question-container .question-choice .question-button,
   .results-container .question-container .question-choice .question-button {
     margin-top: -20px;
     font-size: 28px;
   }
-  /* line 26, ../../styles/_mobile.scss */
+  /* line 27, ../../styles/_mobile.scss */
   .question-container .question-container .question-choice .question-button.button-right,
   .answer-container .question-container .question-choice .question-button.button-right,
   .results-container .question-container .question-choice .question-button.button-right {
     margin-bottom: -25px;
     margin-top: 0;
   }
-  /* line 32, ../../styles/_mobile.scss */
+  /* line 33, ../../styles/_mobile.scss */
   .question-container .answer-choice .congressman-infos,
   .answer-container .answer-choice .congressman-infos,
   .results-container .answer-choice .congressman-infos {
     margin-top: 20px;
     margin-bottom: 0;
   }
-  /* line 36, ../../styles/_mobile.scss */
+  /* line 37, ../../styles/_mobile.scss */
   .question-container .answer-choice .answer-status,
   .answer-container .answer-choice .answer-status,
   .results-container .answer-choice .answer-status {
     margin-bottom: 10px;
   }
-  /* line 40, ../../styles/_mobile.scss */
+  /* line 41, ../../styles/_mobile.scss */
   .question-container .answer-choice .congressman-infos .congressman-party,
   .answer-container .answer-choice .congressman-infos .congressman-party,
   .results-container .answer-choice .congressman-infos .congressman-party {
     font-size: 13px;
   }
 
-  /* line 47, ../../styles/_mobile.scss */
+  /* line 48, ../../styles/_mobile.scss */
   .home .v-center .logo img {
     height: 95px;
   }
-  /* line 50, ../../styles/_mobile.scss */
+  /* line 51, ../../styles/_mobile.scss */
   .home .welcome-message-text {
     padding: 0 20px;
     font-size: 14px;

@@ -15,7 +15,8 @@
   .question-container,
   .answer-container,
   .results-container{
-    .congressman-photo img{
+    .congressman-photo img,
+    img.congressman-photo{
       max-width: 145px;
     }
 

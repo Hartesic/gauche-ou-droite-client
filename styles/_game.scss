@@ -11,7 +11,7 @@
     max-width: 95%;
   }
 
-  .congressman-photo{
+  img.congressman-photo{
     display: inline-block;
     border: solid 10px white;
     position: relative;
@@ -185,7 +185,7 @@
       .question-choice{
         text-align: right;
 
-        .congressman-photo{
+        img.congressman-photo{
           left: 0 !important;
         }
       }
@@ -205,7 +205,7 @@
       .question-choice{
         text-align: left;
 
-        .congressman-photo{
+        img.congressman-photo{
           left: 0 !important;
         }
       }
@@ -216,14 +216,14 @@
     }
   }
 
-  .question-choice .congressman-photo{
+  .question-choice img.congressman-photo{
     .left-choice, .right-choice{
       display: none;
     }
   }
 
   @include bp(xs){
-    .question-choice .congressman-photo{
+    .question-choice img.congressman-photo{
       .left-choice {
         position: absolute;
         display: block;
@@ -282,6 +282,9 @@
       }
     }
   }
+}
+.answer-container .logo{
+  display: none;
 }
 
 .results-container {
