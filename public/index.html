@@ -21,7 +21,7 @@
         </div>
         <ul class="menu">
           <li>
-            <a href="#home" class="menu-item _reload">Recommencer ?</a>
+            <a href="#home" class="menu-item _reload">Recommencer</a>
           </li>
           <li class="current">
             <a href="#regles-du-jeu" class="menu-item tab-select">Regles du jeu</a>
@@ -150,8 +150,7 @@
 
         jQuery('._reload').click(function(e){
           e.preventDefault();
-          if(confirm('Es-tu sûr de vouloir recommencer ?'))
-            location.reload();
+          location.reload();
         });
 
         jQuery('.burger, .close').click(function(e){
