@@ -12,6 +12,12 @@ First, make sure npm dependancies are installed with:
 $ npm i
 ```
 
+Be sure the tests are ok:
+
+```shell
+$ npm test
+```
+
 Then you can run the app:
 
 ```shell
