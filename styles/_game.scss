@@ -61,14 +61,20 @@
         font-family: $font-playfair;
         letter-spacing: 1.2px;
         font-size: 16px;
+        display: block;
       }
     }
 
     .congressman-successrate{
       font-family: $font-playfair;
-      display: block;
-      margin-top: 5px;
-      opacity: .8;
+      display: inline-block;
+      padding: 4px 13px 6px 13px;
+      background: white;
+      color: #ea4b4b;
+      opacity: 1;
+      margin-top: 10px;
+      font-style: normal;
+      border-radius: 3px;
     }
   }
 
@@ -145,7 +151,7 @@
       @include bp(xs){
         top: 0;
         @include translate(0, -100%);
-        margin-top: -40px;
+        margin-top: -30px;
         text-align: center;
         left: 0;
         width: 100%;
@@ -155,7 +161,7 @@
         background: transparent;
         box-shadow: none;
         letter-spacing: 2px;
-        padding: 0;
+        padding: 20px 0;
 
         &:hover{
           background: transparent;
@@ -175,7 +181,7 @@
   }
 
   .score, .quiz-progress, .results-score{
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   &.right-selected{
