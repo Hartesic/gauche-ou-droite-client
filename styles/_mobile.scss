@@ -1,0 +1,58 @@
+@include bp(xs){
+  .question-container,
+  .answer-container,
+  .results-container{
+    .logo,
+    .quiz-progress {
+      display: none;
+    }
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media(max-width: 360px) {
+  .question-container,
+  .answer-container,
+  .results-container{
+    .congressman-photo img,
+    img.congressman-photo{
+      max-width: 145px;
+    }
+
+    .question-container .question-choice .question-button{
+      margin-top: -20px;
+      font-size: 28px;
+
+      &.button-right{
+        margin-bottom: -25px;
+        margin-top: 0;
+      }
+    }
+    .answer-choice {
+      .congressman-infos{
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+      .answer-status{
+        margin-bottom: 10px;
+      }
+
+      .congressman-infos .congressman-party{
+        font-size: 13px;
+      }
+    }
+  }
+
+  .home{
+    .v-center .logo img {
+      height: 95px;
+    }
+    .welcome-message-text{
+      padding: 0 20px;
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 10px;
+    }
+  }
+}
