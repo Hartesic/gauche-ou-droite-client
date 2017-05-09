@@ -3533,6 +3533,16 @@ button:active, .button:active {
   margin-bottom: 10px;
 }
 
+/* line 238, ../../styles/_global.scss */
+.blue, strong.blue {
+  color: #4e66f4 !important;
+}
+
+/* line 241, ../../styles/_global.scss */
+.red, strong.red {
+  color: #ea4b4b !important;
+}
+
 /* line 2, ../../styles/_game.scss */
 .question-container .logo, .answer-container .logo, .results-container .logo {
   margin-bottom: 55px;
@@ -3998,6 +4008,11 @@ body.menu-open .menu-burger {
   font-size: 20px;
 }
 /* line 57, ../../styles/_menu.scss */
+.menu-burger .right-side .pull-right {
+  display: inline-block;
+  max-width: 500px;
+}
+/* line 62, ../../styles/_menu.scss */
 .menu-burger .right-side p {
   margin-bottom: 20px;
   font-family: "Playfair Display", serif;
@@ -4005,14 +4020,14 @@ body.menu-open .menu-burger {
   line-height: 26px;
   opacity: .8;
   color: #787979;
-  max-width: 500px;
+  text-align: right;
 }
-/* line 66, ../../styles/_menu.scss */
-.menu-burger .right-side p strong {
+/* line 71, ../../styles/_menu.scss */
+.menu-burger .right-side p strong, .menu-burger .right-side p a {
   color: #000;
   font-weight: bold;
 }
-/* line 72, ../../styles/_menu.scss */
+/* line 77, ../../styles/_menu.scss */
 .menu-burger .right-side .members {
   list-style: none;
   padding: 0;
@@ -4020,13 +4035,13 @@ body.menu-open .menu-burger {
   display: block;
   margin: 30px 0 0 0;
 }
-/* line 79, ../../styles/_menu.scss */
+/* line 84, ../../styles/_menu.scss */
 .menu-burger .right-side .members li {
   font-size: 18px;
   margin-bottom: 35px;
   font-family: "Playfair Display", serif;
 }
-/* line 83, ../../styles/_menu.scss */
+/* line 88, ../../styles/_menu.scss */
 .menu-burger .right-side .members li .name {
   color: #ea4b4b;
   font-weight: bold;
@@ -4035,7 +4050,7 @@ body.menu-open .menu-burger {
   position: relative;
   padding-right: 50px;
 }
-/* line 91, ../../styles/_menu.scss */
+/* line 96, ../../styles/_menu.scss */
 .menu-burger .right-side .members li .name:after {
   content: '';
   position: absolute;
@@ -4045,14 +4060,14 @@ body.menu-open .menu-burger {
   width: 40px;
   right: 0;
 }
-/* line 101, ../../styles/_menu.scss */
+/* line 106, ../../styles/_menu.scss */
 .menu-burger .right-side .members li .job {
   color: #787979;
   font-size: 15px;
   opacity: .8;
   font-style: italic;
 }
-/* line 111, ../../styles/_menu.scss */
+/* line 116, ../../styles/_menu.scss */
 .menu-burger .close-side {
   position: absolute;
   top: 0;
@@ -4061,7 +4076,7 @@ body.menu-open .menu-burger {
   height: 100%;
   border-right: solid 2px rgba(234, 75, 75, 0.3);
 }
-/* line 118, ../../styles/_menu.scss */
+/* line 123, ../../styles/_menu.scss */
 .menu-burger .close-side .close {
   margin-top: 0;
   height: 120px;
@@ -4073,7 +4088,7 @@ body.menu-open .menu-burger {
   width: 118px;
   background: url("../images/close.svg") no-repeat center;
 }
-/* line 131, ../../styles/_menu.scss */
+/* line 136, ../../styles/_menu.scss */
 .menu-burger .menu {
   position: absolute;
   left: 117px;
@@ -4083,7 +4098,7 @@ body.menu-open .menu-burger {
   text-align: left;
   margin: 0;
 }
-/* line 140, ../../styles/_menu.scss */
+/* line 145, ../../styles/_menu.scss */
 .menu-burger .menu li {
   font-family: "phosphatesolid";
   font-size: 28px;
@@ -4092,7 +4107,7 @@ body.menu-open .menu-burger {
   line-height: 68px;
   position: relative;
 }
-/* line 148, ../../styles/_menu.scss */
+/* line 153, ../../styles/_menu.scss */
 .menu-burger .menu li .menu-item {
   opacity: .7;
   letter-spacing: 1px;
@@ -4101,12 +4116,12 @@ body.menu-open .menu-burger {
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-/* line 154, ../../styles/_menu.scss */
+/* line 159, ../../styles/_menu.scss */
 .menu-burger .menu li .menu-item:hover, .menu-burger .menu li .menu-item:active, .menu-burger .menu li .menu-item:focus {
   opacity: 1;
   text-decoration: none;
 }
-/* line 160, ../../styles/_menu.scss */
+/* line 165, ../../styles/_menu.scss */
 .menu-burger .menu li:before {
   content: '';
   width: 4px;
@@ -4124,28 +4139,28 @@ body.menu-open .menu-burger {
   -o-transition: height 0.3s;
   transition: height 0.3s;
 }
-/* line 174, ../../styles/_menu.scss */
+/* line 179, ../../styles/_menu.scss */
 .menu-burger .menu li.current .menu-item {
   opacity: 1;
 }
-/* line 178, ../../styles/_menu.scss */
+/* line 183, ../../styles/_menu.scss */
 .menu-burger .menu li.current:before {
   height: 100%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 186, ../../styles/_menu.scss */
+  /* line 191, ../../styles/_menu.scss */
   .menu-burger .left-side {
     width: 55%;
   }
-  /* line 190, ../../styles/_menu.scss */
+  /* line 195, ../../styles/_menu.scss */
   .menu-burger .right-side {
     width: 42%;
   }
-  /* line 193, ../../styles/_menu.scss */
+  /* line 198, ../../styles/_menu.scss */
   .menu-burger .right-side > div {
     right: 20px;
   }
-  /* line 198, ../../styles/_menu.scss */
+  /* line 203, ../../styles/_menu.scss */
   .menu-burger .menu li {
     font-size: 22px;
     height: 55px;
@@ -4157,34 +4172,34 @@ body.menu-open .menu-burger {
   .menu-burger {
     border-width: 17px;
   }
-  /* line 207, ../../styles/_menu.scss */
+  /* line 212, ../../styles/_menu.scss */
   .menu-burger .left-side {
     width: 100%;
   }
-  /* line 210, ../../styles/_menu.scss */
+  /* line 215, ../../styles/_menu.scss */
   .menu-burger .left-side .close-side {
     width: 60px;
   }
-  /* line 213, ../../styles/_menu.scss */
+  /* line 218, ../../styles/_menu.scss */
   .menu-burger .left-side .close-side .close {
     width: 60px;
     height: 60px;
     background-size: 20px;
   }
-  /* line 220, ../../styles/_menu.scss */
+  /* line 225, ../../styles/_menu.scss */
   .menu-burger .left-side .menu {
     top: 19px;
     left: 57px;
     position: relative;
   }
-  /* line 225, ../../styles/_menu.scss */
+  /* line 230, ../../styles/_menu.scss */
   .menu-burger .left-side .menu li {
     font-size: 18px;
     padding-left: 35px;
     height: 40px;
     line-height: 48px;
   }
-  /* line 234, ../../styles/_menu.scss */
+  /* line 239, ../../styles/_menu.scss */
   .menu-burger .right-side {
     z-index: 6;
     border-top: solid 2px rgba(234, 75, 75, 0.3);
@@ -4194,7 +4209,7 @@ body.menu-open .menu-burger {
     padding-top: 10px;
     top: auto;
   }
-  /* line 242, ../../styles/_menu.scss */
+  /* line 247, ../../styles/_menu.scss */
   .menu-burger .right-side > div {
     position: relative;
     padding: 0 20px;
