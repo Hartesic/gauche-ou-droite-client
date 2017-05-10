@@ -5,10 +5,13 @@ const WelcomeMessage = () => (
     <div className="logo">
       <img src="images/logo.svg" />
     </div>
-    <div className='welcome-message-text text'>Bienvenue dans <i>Gauche ou Droite ?</i></div>
-    <div className='welcome-message-text text'>Le quiz qui vous fera réviser votre culture électorale.</div>
-    <div className='welcome-message-text text'>Saurez-vous reconnaître le bord politique d'un député au premier coup d'oeil ?</div>
-    <div className='welcome-message-text text'>Parce que les députés aussi ont droit au délit de faciès !</div>
+    <div className="welcome-message-text text">Avez-vous déjà entendu des réflexions de ce genre :</div>
+    <div className="welcome-message-text text">"Il a bien une tête de gaucho, lui !"</div>
+    <div className="welcome-message-text text">"Il a pas une dégaine à voter Mitterand..."</div>
+    <div className="welcome-message-text text"><i>Gauche ou Droite ?</i> a pour objectif de tester cette afirmation.</div>
+    <div className="welcome-message-text text">Le bord politique d'un député se reconnaît-il au premier coup d'oeil ?</div>
+    <div className="welcome-message-text text">Nos amis de l'assemblée sont-ils victimes de délit de faciès ?</div>
+    <div className="welcome-message-text text">À vous de nous le dire !</div>
   </div>
 )
 
