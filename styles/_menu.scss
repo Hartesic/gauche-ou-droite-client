@@ -54,6 +54,11 @@ body.menu-open{
       font-size: 20px;
     }
 
+    .pull-right{
+      display: inline-block;
+      max-width: 500px;
+    }
+
     p{
       margin-bottom: 20px;
       font-family: $font-playfair;
@@ -61,9 +66,9 @@ body.menu-open{
       line-height: 26px;
       opacity: .8;
       color: #787979;
-      max-width: 500px;
+      text-align: right;
 
-      strong{
+      strong, a{
         color: #000;
         font-weight: bold;
       }

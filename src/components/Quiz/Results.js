@@ -32,9 +32,11 @@ class Results extends PureComponent {
         <div className="logo">
           <img src="images/logo.svg" />
         </div>
-        <div className="results-text text">Pas besoin d'envoyer "fizik" au 81212 pour savoir si tu es physionomiste, on te dit tout ici :</div>
+        <div className="results-text text">Voilà, c'est fini !</div>
+        <div className="results-text text">Hésite pas à partager notre petit jeu à tes amis, connaissances, à ton frère, ton père, ta mère, ta grand mère, ton chien... tout le monde quoi :)</div>
+        <div className="results-text text">Pour ton score, le voici :</div>
         <div className="results-score">{this.getScore()} <span>/ {questionCount}</span></div>
-        <button className="results-button button-playagain" onClick={e => playAgainFn()}>I can do better, test me again!</button>
+        <button className="results-button button-playagain" onClick={e => playAgainFn()}>Recommencer !</button>
       </div>
     )
   }

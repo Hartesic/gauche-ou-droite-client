@@ -235,6 +235,13 @@ button, .button{
   }
 }
 
+.blue, strong.blue{
+  color: $blue !important;
+}
+.red, strong.red{
+  color: $red !important;
+}
+
 //.validator{
 //  position: absolute;
 //  top: 50%;
