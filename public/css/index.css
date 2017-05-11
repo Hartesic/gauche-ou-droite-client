@@ -3532,13 +3532,21 @@ button:active, .button:active {
 .home .welcome-message-text {
   margin-bottom: 10px;
 }
+/* line 232, ../../styles/_global.scss */
+.home .welcome-message-container .logo {
+  margin-bottom: 40px;
+}
+/* line 235, ../../styles/_global.scss */
+.home .welcome-message-container .logo img {
+  height: 160px;
+}
 
-/* line 238, ../../styles/_global.scss */
+/* line 242, ../../styles/_global.scss */
 .blue, strong.blue {
   color: #4e66f4 !important;
 }
 
-/* line 241, ../../styles/_global.scss */
+/* line 245, ../../styles/_global.scss */
 .red, strong.red {
   color: #ea4b4b !important;
 }
