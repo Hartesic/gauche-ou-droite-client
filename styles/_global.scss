@@ -216,6 +216,8 @@ button, .button{
   line-height: 25px;
   @include bp(xs){
     padding: 0 30px;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -234,6 +236,14 @@ button, .button{
 
       img{
         height: 160px;
+      }
+
+      @include bp(xs){
+        margin-bottom: 30px;
+
+        img{
+          height: 110px;
+        }
       }
     }
   }
