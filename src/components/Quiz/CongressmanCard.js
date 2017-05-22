@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CongressmanCard = ({ apiUrl, congressman, infosToDisplay=[] }) => (
+const CongressmanCard = ({ congressman, infosToDisplay=[] }) => (
   <div className="congressman-container">
     <div className="congressman-photo">
-      {infosToDisplay.includes('photo') && <img className="congressman-photo" src={apiUrl + congressman.path} alt="Photo d'un député" />}
+      {infosToDisplay.includes('photo') && <img className="congressman-photo" src={congressman.path} alt="Photo d'un député" />}
     </div>
     <div className="congressman-infos">
       {infosToDisplay.includes('name') && <span className="congressman-name">{congressman.name}</span>}

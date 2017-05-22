@@ -42,8 +42,6 @@ describe('<Question />', () => {
     const congressmanCard = wrapper.find('CongressmanCard')
     expect(congressmanCard)
       .to.have.length(1, '<Question /> does not display <CongressmanCard />')
-    expect(congressmanCard.prop('apiUrl'))
-      .to.equal(apiUrl, '<Question /> does not pass apiUrl correctly to <CongressmanCard />')
     expect(congressmanCard.prop('congressman'))
       .to.deep.equal(congressman, '<Question /> does not pass congressman correctly to <CongressmanCard />')
     expect(congressmanCard.prop('infosToDisplay'))

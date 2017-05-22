@@ -9,7 +9,7 @@ const Question = ({ apiUrl, congressman, currentQuestionIndex, questionCount, se
       <img src="images/logo.svg" />
     </div>
     <div className="question-choice">
-      <CongressmanCard apiUrl={apiUrl} congressman={congressman} infosToDisplay={['photo']} />
+      <CongressmanCard congressman={congressman} infosToDisplay={['photo']} />
       <button className='question-button button-left' onClick={e => selectAnswerFn('gauche')}>Gauche</button>
       <button className='question-button button-right' onClick={e => selectAnswerFn('droite')}>Droite</button>
     </div>

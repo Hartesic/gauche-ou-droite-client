@@ -8,7 +8,6 @@ import CongressmanCard from './CongressmanCard'
 chai.use(chaiEnzyme())
 
 describe('<CongressmanCard />', () => {
-  const apiUrl = 'api-url'
   const congressman = {
     name: 'congressman-name',
     parti: 'congressman-party',
@@ -21,12 +20,11 @@ describe('<CongressmanCard />', () => {
     ]
     const wrapper = shallow(
       <CongressmanCard
-        apiUrl={apiUrl}
         congressman={congressman}
         infosToDisplay={infosToDisplay}
       />
     )
-    const congressmanPhotoUrl = apiUrl + congressman.path
+    const congressmanPhotoUrl = congressman.path
 
     // <img />
     expect(wrapper.find('img').prop('src'))
@@ -44,12 +42,11 @@ describe('<CongressmanCard />', () => {
     ]
     const wrapper = shallow(
       <CongressmanCard
-        apiUrl={apiUrl}
         congressman={congressman}
         infosToDisplay={infosToDisplay}
       />
     )
-    const congressmanPhotoUrl = apiUrl + congressman.path
+    const congressmanPhotoUrl = congressman.path
 
     // <img />
     expect(wrapper.find('img').prop('src'))

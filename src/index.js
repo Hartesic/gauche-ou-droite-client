@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 
 import App from './components/App'
 
-const API_URL = 'http://localhost:5000'
+const API_URL = '/api'
 const QUESTION_COUNT = 20
 
 render(
