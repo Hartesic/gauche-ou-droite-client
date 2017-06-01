@@ -2,7 +2,7 @@ import React from 'react'
 
 const CongressmanCard = ({ congressman, infosToDisplay=[], answer }) => (
   <div className="congressman-container" >
-      <div  className={'congressman-photo animated ' + (infosToDisplay.includes('name') ? (answer == congressman.side  ? 'pulse' : 'shake') : 'fadeInUp')}>
+      <div  className={'congressman-photo animated ' + (infosToDisplay.includes('name') ? (answer === congressman.side  ? 'pulse' : 'shake') : 'fadeInUp')}>
           {infosToDisplay.includes('photo') && <img className="congressman-photo" src={congressman.path} alt="Photo d'un député" />}
       </div>
     <div className="congressman-infos animated fadeInUp">
