@@ -11,15 +11,19 @@ const Answer = ({ answer, apiUrl, congressman, currentQuestionIndex, nextQuestio
     <div className="answer-choice">
         <div className="answer-status">
             {answer === congressman.side ? (
-                <span className="answer-status-correct">Bien vu !</span>
+                <div className="answer-status-correct pulse animated">
+                    Bien vu !
+                </div>
             ) : (
-                <span className="answer-status-incorrect">Et non !</span>
+                <div className="answer-status-incorrect shake animated">
+                    Et non !
+                </div>
             )}
         </div>
-        <CongressmanCard congressman={congressman} infosToDisplay={['photo', 'name', 'party', 'successRate']} />
+        <CongressmanCard congressman={congressman} infosToDisplay={['photo', 'name', 'party', 'successRate']} answer={answer} />
     </div>
     <QuizProgress currentQuestionIndex={currentQuestionIndex} questionCount={questionCount} />
-    <button className="answer-button button-playagain" onClick={nextQuestionFn}>Ok, suivant !</button>
+    <button className="answer-button button-playagain animated fadeInUp" onClick={nextQuestionFn}>Ok, suivant !</button>
   </div>
 )
 

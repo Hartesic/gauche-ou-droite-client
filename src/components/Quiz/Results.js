@@ -28,7 +28,7 @@ class Results extends PureComponent {
   render () {
     const { playAgainFn, questionCount } = this.props
     return (
-      <div className="results-container">
+      <div className="results-container animated fadeInUp">
         <div className="logo">
           <img src="images/logo.svg" />
         </div>
@@ -37,7 +37,7 @@ class Results extends PureComponent {
         <div className="results-text text">N'hésite pas à partager notre petit jeu à tes amis, connaissances, parents, animaux de compagnie... Tout le monde quoi ! :)</div>
         <div className="results-text text">Ton score :</div>
         <div className="results-score">{this.getScore()} <span>/ {questionCount}</span></div>
-        <button className="results-button button-playagain" onClick={e => playAgainFn()}>Recommencer !</button>
+        <button className="results-button button-playagain" onClick={e => playAgainFn()}>Recommencer!</button>
       </div>
     )
   }
