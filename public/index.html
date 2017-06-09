@@ -221,5 +221,20 @@
       });
     });
   </script>
+
+  <script>
+    window.addEventListener('keydown', function (e) {
+      switch (e.code) {
+        case 'ArrowLeft':
+          jQuery('.button-left').click()
+          break
+        case 'ArrowRight':
+          jQuery('.button-right').click()
+          break
+        case 'Enter':
+          jQuery('.button-start, .fetch-error-message-button, .answer-button').click()
+      }
+    })
+  </script>
 </body>
 </html>
