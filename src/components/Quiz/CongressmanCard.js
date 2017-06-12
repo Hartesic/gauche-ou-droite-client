@@ -8,7 +8,7 @@ const CongressmanCard = ({ congressman, infosToDisplay=[], answer }) => (
     <div className="congressman-infos animated fadeInUp">
       {infosToDisplay.includes('name') && <span className="congressman-name">{congressman.name}</span>}
       {infosToDisplay.includes('party') && <span className="congressman-party">{congressman.parti}</span>}
-      {infosToDisplay.includes('successRate') && <i className="congressman-successrate">{congressman.average_success * 100}% ont trouvé</i>}
+      {infosToDisplay.includes('successRate') && <i className="congressman-successrate">{Math.round(congressman.average_success * 100)}% ont trouvé</i>}
     </div>
   </div>
 )
