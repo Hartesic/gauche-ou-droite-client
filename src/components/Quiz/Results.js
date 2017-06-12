@@ -28,10 +28,6 @@ class Results extends PureComponent {
       .catch((error) => { window.console.log(error)})
   }
 
-  getFormattedScore () {
-    return this.getScore() + '/' + this.props.questionCount
-  }
-
   getScore () {
     const { answers, congressmen } = this.props
     const correctAnswers = answers.filter((a, i) => (a === congressmen[i].side))
