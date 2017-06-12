@@ -5899,9 +5899,25 @@ header .socials ul li a:hover {
   .results-container .quiz-progress {
     display: none;
   }
+
+  /* line 16, ../../styles/_mobile.scss */
+  .question-container .congressman-photo img,
+  .question-container img.congressman-photo,
+  .answer-container .congressman-photo img,
+  .answer-container img.congressman-photo,
+  .results-container .congressman-photo img,
+  .results-container img.congressman-photo {
+    max-width: 165px;
+  }
 }
-@media (max-width: 360px) {
-  /* line 18, ../../styles/_mobile.scss */
+@media (max-height: 600px) {
+  /* line 25, ../../styles/_mobile.scss */
+  .hidden-mini-devices {
+    display: none;
+  }
+}
+@media (max-height: 500px) {
+  /* line 34, ../../styles/_mobile.scss */
   .question-container .congressman-photo img,
   .question-container img.congressman-photo,
   .answer-container .congressman-photo img,
@@ -5910,50 +5926,82 @@ header .socials ul li a:hover {
   .results-container img.congressman-photo {
     max-width: 145px;
   }
-  /* line 23, ../../styles/_mobile.scss */
+  /* line 39, ../../styles/_mobile.scss */
   .question-container .question-container .question-choice .question-button,
   .answer-container .question-container .question-choice .question-button,
   .results-container .question-container .question-choice .question-button {
     margin-top: -20px;
     font-size: 28px;
   }
-  /* line 27, ../../styles/_mobile.scss */
+  /* line 43, ../../styles/_mobile.scss */
   .question-container .question-container .question-choice .question-button.button-right,
   .answer-container .question-container .question-choice .question-button.button-right,
   .results-container .question-container .question-choice .question-button.button-right {
     margin-bottom: -25px;
     margin-top: 0;
   }
-  /* line 33, ../../styles/_mobile.scss */
+  /* line 49, ../../styles/_mobile.scss */
   .question-container .answer-choice .congressman-infos,
   .answer-container .answer-choice .congressman-infos,
   .results-container .answer-choice .congressman-infos {
     margin-top: 20px;
     margin-bottom: 0;
   }
-  /* line 37, ../../styles/_mobile.scss */
+  /* line 53, ../../styles/_mobile.scss */
   .question-container .answer-choice .answer-status,
   .answer-container .answer-choice .answer-status,
   .results-container .answer-choice .answer-status {
     margin-bottom: 10px;
   }
-  /* line 41, ../../styles/_mobile.scss */
+  /* line 57, ../../styles/_mobile.scss */
   .question-container .answer-choice .congressman-infos .congressman-party,
   .answer-container .answer-choice .congressman-infos .congressman-party,
   .results-container .answer-choice .congressman-infos .congressman-party {
     font-size: 13px;
   }
 
-  /* line 48, ../../styles/_mobile.scss */
+  /* line 64, ../../styles/_mobile.scss */
   .home .v-center .logo img {
     height: 95px;
   }
-  /* line 51, ../../styles/_mobile.scss */
+  /* line 67, ../../styles/_mobile.scss */
   .home .welcome-message-text {
     padding: 0 20px;
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 10px;
+  }
+}
+/* line 76, ../../styles/_mobile.scss */
+.landscape-detect {
+  display: none;
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* line 82, ../../styles/_mobile.scss */
+  .landscape-detect {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  /* line 92, ../../styles/_mobile.scss */
+  .landscape-detect img {
+    width: 150px;
+  }
+  /* line 96, ../../styles/_mobile.scss */
+  .landscape-detect .text-rotate {
+    color: black;
+    max-width: 240px;
+    font-size: 16px;
+    line-height: 26px;
+    vertical-align: middle;
+    margin-bottom: 0;
+    display: inline-block;
   }
 }
 

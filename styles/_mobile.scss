@@ -9,9 +9,25 @@
     max-width: 100%;
     padding: 0 20px;
   }
+
+  .question-container,
+  .answer-container,
+  .results-container{
+    .congressman-photo img,
+    img.congressman-photo{
+      max-width: 165px;
+    }
+  }
 }
 
-@media(max-width: 360px) {
+
+@media(max-height: 600px) {
+  .hidden-mini-devices{
+    display: none;
+  }
+}
+
+@media(max-height: 500px) {
   .question-container,
   .answer-container,
   .results-container{
@@ -53,6 +69,39 @@
       font-size: 14px;
       line-height: 16px;
       margin-bottom: 10px;
+    }
+  }
+}
+
+.landscape-detect{
+  display: none;
+}
+
+@include bp(xs) {
+  @media screen and (orientation: landscape) {
+    .landscape-detect {
+      display: block;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      background: rgba(#fff, .95);
+
+      img{
+        width: 150px;
+      }
+
+      .text-rotate{
+        color: black;
+        max-width: 240px;
+        font-size: 16px;
+        line-height: 26px;
+        vertical-align: middle;
+        margin-bottom: 0;
+        display: inline-block;
+      }
     }
   }
 }
