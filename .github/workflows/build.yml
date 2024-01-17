@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - add-sonar-properties-file
   pull_request:
     types: [opened, synchronize, reopened]
 
